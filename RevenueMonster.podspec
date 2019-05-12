@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://revenuemonster.my'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'myussufz' => 'yussuf@revenuemonste.my' }
-  s.source           = { :git => 'https://github.com/RevenueMonster/RM-Android.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/RevenueMonster/RM-IOS.git', :tag => s.version.to_s }
   s.swift_version = '5.0'
   s.ios.deployment_target = '8.0'
 	s.platform = :ios, '8.0'
