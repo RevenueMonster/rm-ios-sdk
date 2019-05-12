@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RevenueMonster_Example' do
+  pod 'RevenueMonster', :path => '../'
+
+  target 'RevenueMonster_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

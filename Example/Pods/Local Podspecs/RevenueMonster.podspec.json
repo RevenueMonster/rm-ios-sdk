@@ -1,0 +1,41 @@
+{
+  "name": "RevenueMonster",
+  "version": "0.1.0",
+  "summary": "A short description of RevenueMonster.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/RevenueMonster/RM-Android",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "myussufz": "charu.yussuf@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/myussufz/RevenueMonster.git",
+    "tag": "0.1.0"
+  },
+  "swift_version": "5.0",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "RevenueMonster/**/*",
+  "preserve_paths": "RevenueMonster/Classes/WeChatSDK/module.modulemap",
+  "private_header_files": "RevenueMonster/Classes/WeChatSDK/*.h",
+  "libraries": [
+    "z",
+    "c++",
+    "sqlite3"
+  ],
+  "frameworks": [
+    "SystemConfiguration",
+    "CoreTelephony",
+    "CFNetwork",
+    "Security"
+  ],
+  "vendored_libraries": "RevenueMonster/Classes/WeChatSDK/libWeChatSDK.a",
+  "xcconfig": {
+    "SWIFT_INCLUDE_PATHS": "${PODS_TARGET_SRCROOT}/RevenueMonster/Classes/WeChatSDK",
+    "OTHER_LDFLAGS": "-all_load"
+  }
+}

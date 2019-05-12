@@ -1,0 +1,16 @@
+PODS:
+  - RevenueMonster (0.1.0)
+
+DEPENDENCIES:
+  - RevenueMonster (from `../`)
+
+EXTERNAL SOURCES:
+  RevenueMonster:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RevenueMonster: 247b3b7bb3f94e1838bada2dda56bb85c09aa1e8
+
+PODFILE CHECKSUM: ecfadd60ad2e65108dcb07da13d54d66cfb2446a
+
+COCOAPODS: 1.5.3

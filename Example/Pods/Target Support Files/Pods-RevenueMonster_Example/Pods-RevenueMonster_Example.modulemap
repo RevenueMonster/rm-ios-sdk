@@ -1,0 +1,6 @@
+framework module Pods_RevenueMonster_Example {
+  umbrella header "Pods-RevenueMonster_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
