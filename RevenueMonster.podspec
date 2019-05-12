@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RevenueMonster'
-  s.version          = '0.0.1'
+  s.version          = '0.1-beta'
   s.summary          = 'RM SDK for IOS'
 
   s.description      = <<-DESC
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/RevenueMonster/RM-Android.git', :tag => s.version.to_s }
   s.swift_version = '5.0'
   s.ios.deployment_target = '8.0'
-	s.platform = :ios
+	s.platform = :ios, '8.0'
   s.source_files = 'RevenueMonster/**/*'
   s.preserve_paths = 'RevenueMonster/Library/WeChatSDK/module.modulemap'
   s.private_header_files = 'RevenueMonster/Library/WeChatSDK/*.h'
