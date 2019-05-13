@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
 		RM SDK for IOS. Supported payment method WeChatPay Malaysia
                        DESC
   s.homepage         = 'https://revenuemonster.my'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-	s.swift_version = '5.0'
+  s.license          = { :type => 'BSD 3-Clause "New" or "Revised" License', :file => 'LICENSE' }
+	s.swift_version 	 = '5.0'
   s.author           = { 'myussufz' => 'yussuf@revenuemonste.my' }
   s.source           = { :git => 'https://github.com/RevenueMonster/RM-IOS.git', :tag => 'v' +  s.version.to_s }
 
