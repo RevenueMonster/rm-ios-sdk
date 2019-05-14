@@ -51,16 +51,16 @@ class Result: PaymentResult {
 }
 ```
 
-## WeChat Pay In-App
+## WeChatPay In-App Payment
 
 ###  Register an App ID on WeChat Open Platform
-For proccessing WeChat payments you first need to register an App ID on WeChat Open Platform.
+Before started to do wechat payments, first need to register an App ID on WeChat Open Platform.
 
-##### Add your App ID to URL scheme:
+##### Add your WeChat App ID to URL scheme:
 1. Go to `Targets > Info > URL type > URL Scheme`.
 2. Add a new `URL Scheme` :
 - For identifier set `weixin`
-- For URL Schemes set your App Id.
+- For URL Schemes set your App ID.
 
 ##### Register `weixin` in your  `URL types`:
 1. Go to your `Info.plist`
