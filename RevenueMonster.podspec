@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'RevenueMonster/Library/WeChatSDK/module.modulemap'
   s.private_header_files = 'RevenueMonster/Library/WeChatSDK/*.h'
   s.libraries = 'z', 'c++', 'sqlite3'
-  s.frameworks = 'SystemConfiguration', 'CoreTelephony', 'CFNetwork', 'Security'
+  s.frameworks = 'SystemConfiguration', 'CoreTelephony', 'CFNetwork', 'Security', 'Foundation'
   s.vendored_libraries = 'RevenueMonster/Library/WeChatSDK/libWeChatSDK.a'
   s.xcconfig = {
       'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/RevenueMonster/Library/WeChatSDK',
