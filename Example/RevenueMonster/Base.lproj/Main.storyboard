@@ -22,11 +22,43 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj2-og-wZ3">
-                                <rect key="frame" x="162" y="318" width="66" height="30"/>
+                                <rect key="frame" x="159" y="157" width="58" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Checkout"/>
+                                <state key="normal" title="TNG MY"/>
                                 <connections>
                                     <action selector="onCheckout:" destination="vXZ-lx-hvc" eventType="touchDown" id="HTY-Zu-FxU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-VO-zxH">
+                                <rect key="frame" x="148" y="223" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="BOOST MY"/>
+                                <connections>
+                                    <action selector="onBoostPay:" destination="vXZ-lx-hvc" eventType="touchDown" id="CHq-Ue-8nm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh3-XP-bGv">
+                                <rect key="frame" x="130" y="292" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="WECHATPAY MY"/>
+                                <connections>
+                                    <action selector="onWeChatPay:" destination="vXZ-lx-hvc" eventType="touchDown" id="x8e-So-ddf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToQ-hH-pFZ">
+                                <rect key="frame" x="151" y="356" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ALIPAY CN"/>
+                                <connections>
+                                    <action selector="onAliPay:" destination="vXZ-lx-hvc" eventType="touchDown" id="gay-ch-AUe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8x-8A-OwI">
+                                <rect key="frame" x="146" y="426" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GrabPay MY"/>
+                                <connections>
+                                    <action selector="onGrabPay:" destination="vXZ-lx-hvc" eventType="touchDown" id="NoJ-yX-U8g"/>
                                 </connections>
                             </button>
                         </subviews>

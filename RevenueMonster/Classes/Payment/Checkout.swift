@@ -7,14 +7,19 @@
 
 import Foundation
 import WeChatSDK
+import WebKit
 
 public final class Checkout {
     var wechatAppID: String = ""
     var env: Env = Env.PRODUCTION
     var isLeaveApp: Bool = false
+    var inAppWebView: Bool = false
     var leaveTimestamp: Int64!
-    
+    var viewController: UIViewController!
+    var openBrowserView: UIViewController!
+
     public init(viewController: UIViewController) {
+        self.viewController = viewController
     }
     
     public func setWeChatAppID(_ wechatAppID: String) -> Checkout {
@@ -25,6 +30,12 @@ public final class Checkout {
     public func setEnv(_ env: Env) -> Checkout {
         self.env = env
         return self
+    }
+    
+    @objc func onClose() {
+        self.openBrowserView.dismiss(animated: true, completion: nil)
+        sleep(3)
+        self.inAppWebView = false
     }
     
     public func pay(method: Method, checkoutId: String, result: PaymentResult) throws {
@@ -45,17 +56,26 @@ public final class Checkout {
             
             let response = try convertToDictionary(text: String(describing: String(data: data!, encoding: .utf8)!))
             let item = response!["item"] as? Dictionary<String, AnyObject>
-    
+            
             switch method {
             case .WECHATPAY_MY:
                 let prepayId = item?["url"] as! String
-                let isSend = try weChatPayMalaysia(prepayId)
-                if isSend {
-                    self.isLeaveApp = true
-                    self.leaveTimestamp = Date().timestamp()
-                } else {
-                    throw CheckoutError.failToInitiatePayment
-                }
+                self.isLeaveApp = true
+                self.leaveTimestamp = Date().timestamp()
+                try weChatPayMalaysia(prepayId)
+                break
+            case .ALIPAY_CN, .GRABPAY_MY, .TNG_MY:
+                let prepayId = item?["url"] as! String
+                self.isLeaveApp = true
+                self.leaveTimestamp = Date().timestamp()
+                self.inAppWebView = true
+                try openBrowser(prepayId)
+                break
+            case .BOOST_MY:
+                let url = item?["url"] as! String
+                self.isLeaveApp = true
+                self.leaveTimestamp = Date().timestamp()
+                self.openURL(scheme: url)
                 break
             }
         } catch {
@@ -63,36 +83,37 @@ public final class Checkout {
         }
         
         DispatchQueue.global(qos: .background).async {
-            for _ in 1...600 {
+            for _ in 1...800 {
                 var isOrderStatusInProcess: Bool = false
-                
+
                 if !self.isLeaveApp {
                     break
                 }
                 let currentTimestamp = Date().timestamp()!
                 let timeDifference = currentTimestamp - self.leaveTimestamp!
-                if timeDifference > 4000 {
+                if timeDifference > 4000 && !self.inAppWebView {
                     self.isLeaveApp = false
                 }
-                
+
                 do {
                     let queryOrder = try QueryOrder(checkoutId: checkoutId, env: self.env)
                     if let error = queryOrder.error() {
                         result.onPaymentFailed(error: error)
                         return
                     }
-                    
+
                     if queryOrder.isPaymentSuccess() {
                         result.onPaymentSuccess(transaction: queryOrder.getTransaction())
                         return
                     }
-                    
+
                     if queryOrder.getTransactionStatus() == Status.IN_PROCESS.toString() {
                         isOrderStatusInProcess = true
                     }
-                    
-                    if timeDifference > 4000 && isOrderStatusInProcess {
+
+                    if timeDifference > 4000 && isOrderStatusInProcess && !self.inAppWebView {
                         result.onPaymentCancelled()
+                        return
                     }
                     sleep(1)
                 } catch {
@@ -100,6 +121,12 @@ public final class Checkout {
                 }
             }
         }
+    }
+    
+    private func openBrowser(_ prepayID: String) throws -> Bool {
+        openBrowserView = BrowserController(checkout: self, url: prepayID)
+        self.viewController.present(openBrowserView, animated: true, completion: nil)
+        return true
     }
     
     private func weChatPayMalaysia(_ prepayID: String) throws -> Bool {
@@ -110,14 +137,24 @@ public final class Checkout {
         if (!WXApi.isWXAppInstalled()) {
             throw CheckoutError.wechatAppNotInstalled
         }
-
+        
         var dict : Dictionary = Dictionary<AnyHashable,Any>()
         dict["prepay_id"] = prepayID
         
         let i = WXOpenBusinessWebViewReq()
         i.businessType = 7
         i.queryInfoDic = dict
-
+        
         return WXApi.send(i)
+    }
+    
+    private func openURL(scheme: String) {
+        if let url = URL(string: scheme) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
 }

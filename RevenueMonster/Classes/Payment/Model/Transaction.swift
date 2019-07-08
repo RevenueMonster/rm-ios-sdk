@@ -27,23 +27,23 @@ public struct Transaction: Codable {
     var updatedAt: String = ""
     
     public mutating func setTransaction(transaction: Dictionary<String, AnyObject>) {
-        self.key = transaction["key"] as! String
+        self.key = transaction["key"] as? String ?? ""
         self.id = transaction["id"] as! String
-        self.merchantKey = transaction["merchantKey"] as! String
-        self.storeKey = transaction["storeKey"] as! String
+        self.merchantKey = transaction["merchantKey"] as? String ?? ""
+        self.storeKey = transaction["storeKey"] as? String ?? ""
         
         let order = transaction["order"] as? Dictionary<String, AnyObject>
         self.order.setOrder(order: order!)
         
         self.type = transaction["type"] as! String
         self.transactionId = transaction["transactionId"] as! String
-        self.platform = transaction["platform"] as! String
-        self.method = transaction["method"] as! [String]
+        self.platform = transaction["platform"] as! String? ?? ""
+        self.method = transaction["method"] as? [String] ?? [""]
         self.redirectUrl = transaction["redirectUrl"] as! String
         self.notifyUrl = transaction["notifyUrl"] as! String
         self.startAt = transaction["startAt"] as! String
         self.endAt = transaction["endAt"] as! String
-        self.referenceKey = transaction["referenceKey"] as! String
+        self.referenceKey = transaction["referenceKey"] as? String ?? ""
         self.status = transaction["status"] as! String
         self.createdAt = transaction["createdAt"] as! String
         self.updatedAt = transaction["updatedAt"] as! String
