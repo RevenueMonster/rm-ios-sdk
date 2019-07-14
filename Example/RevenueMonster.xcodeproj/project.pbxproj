@@ -41,6 +41,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		77541B61B5BA9FFC8C9891D5 /* Pods-RevenueMonster_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevenueMonster_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example.release.xcconfig"; sourceTree = "<group>"; };
+		909A056722BF2D0A0090A611 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		909A056A22BFD1760090A611 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9807D7B99106FDD1BD0FDC85 /* Pods-RevenueMonster_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevenueMonster_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFF9981E321619CC2855E52C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D295D324D30EA5E457E6C5A0 /* Pods-RevenueMonster_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevenueMonster_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		5CD89F2D8E716E39706A5FE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				909A056A22BFD1760090A611 /* CoreTelephony.framework */,
+				909A056722BF2D0A0090A611 /* CFNetwork.framework */,
 				1359EDFCED80B09966426DF1 /* Pods_RevenueMonster_Example.framework */,
 				D83AE4A5BFFA1B51D3C9A358 /* Pods_RevenueMonster_Tests.framework */,
 			);
@@ -215,6 +219,11 @@
 						DevelopmentTeam = BDZ4N42FLM;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;

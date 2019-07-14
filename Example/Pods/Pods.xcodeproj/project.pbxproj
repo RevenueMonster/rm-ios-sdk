@@ -34,6 +34,7 @@
 		906B9A4422828498003E873E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A4322828497003E873E /* libz.tbd */; };
 		906B9A46228284A1003E873E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A45228284A1003E873E /* libsqlite3.tbd */; };
 		906B9A48228284AA003E873E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A47228284AA003E873E /* libc++.tbd */; };
+		90E3066122D33BED00008D49 /* BrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3066022D33BEC00008D49 /* BrowserController.swift */; };
 		9620315E90F7F3BDFDC8C1AD847A5C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		A1AC9226BD59AD366EDCE55CDE852AC5 /* Pods-RevenueMonster_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC82F86E8A43B20E678A8C62812BEB3 /* Pods-RevenueMonster_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7232CDAFDD5F32F84148B72426CFC96 /* Pods-RevenueMonster_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2150B37832E1A95A0024F1FFF88BE0 /* Pods-RevenueMonster_Tests-dummy.m */; };
@@ -104,6 +105,7 @@
 		906B9A45228284A1003E873E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		906B9A47228284AA003E873E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
 		90858870228283F300B2BF3F /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = ../../RevenueMonster/WeChatSDK/libWeChatSDK.a; sourceTree = "<group>"; };
+		90E3066022D33BEC00008D49 /* BrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserController.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96A145C95BE53D5A1C952EB38B720568 /* Pods-RevenueMonster_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RevenueMonster_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		97F8CB216368283952BA759082832D30 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		903088522285D39B000245A9 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				90E3065B22D2430400008D49 /* View */,
 				9030886722875133000245A9 /* Constant */,
 				9030885C22865B1C000245A9 /* Model */,
 				903088572285D41B000245A9 /* Util */,
@@ -277,6 +280,14 @@
 				9030886C22875497000245A9 /* Status.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		90E3065B22D2430400008D49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				90E3066022D33BEC00008D49 /* BrowserController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ADB3A49CCE9F5AD41D7C6EE378465367 /* Pods-RevenueMonster_Example */ = {
@@ -464,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E3066122D33BED00008D49 /* BrowserController.swift in Sources */,
 				9030887522880A87000245A9 /* PaymentError.swift in Sources */,
 				9030886B22875306000245A9 /* Method.swift in Sources */,
 				90308873228807E4000245A9 /* QueryOrder.swift in Sources */,
@@ -533,6 +545,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -556,6 +569,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -820,6 +834,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -843,6 +858,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
