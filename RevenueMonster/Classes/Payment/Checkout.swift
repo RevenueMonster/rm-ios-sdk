@@ -133,13 +133,12 @@ public final class Checkout {
         }
     }
     
-    private func openBrowser(_ prepayID: String) throws -> Bool {
+    private func openBrowser(_ prepayID: String) throws {
         openBrowserView = BrowserController(checkout: self, url: prepayID)
         self.viewController.present(openBrowserView, animated: true, completion: nil)
-        return true
     }
     
-    private func weChatPayMalaysia(_ prepayID: String) throws -> Bool {
+    private func weChatPayMalaysia(_ prepayID: String) throws {
         if (!WXApi.registerApp(wechatAppID)) {
             throw CheckoutError.invalidWeChatAppID
         }
@@ -155,7 +154,9 @@ public final class Checkout {
         i.businessType = 7
         i.queryInfoDic = dict
         
-        return WXApi.send(i)
+        if !WXApi.send(i) {
+            throw CheckoutError.failToInitiatePayment
+        }
     }
     
     private func openURL(scheme: String) {

@@ -115,7 +115,7 @@ class ViewController: UIViewController {
 
         try Checkout(viewController: self).setEnv(Env.SANDBOX)
             .setWeChatAppID("")
-            .pay(method: method, checkoutId: "1563083653404130120", result: Result(viewController: self))
+            .pay(method: method, checkoutId: "1563085632759636617", result: Result(viewController: self))
 
 //        do {
 //            let url: String = "https://sb-api.revenuemonster.my/demo/payment/online"
