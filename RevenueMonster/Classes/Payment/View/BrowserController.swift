@@ -53,12 +53,12 @@ class BrowserController: UIViewController {
         }
     }
     
-    func open() -> UIViewController {
+    func open() {
         /* ******************************* TOP NAVIGATION BAR ******************************* */
         navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: checkout.viewController.view.frame.size.width, height: 44))
         
         let rightButton = UIBarButtonItem(title: "Close", style: UIBarButtonItem.Style.plain, target: self.checkout, action: Selector(("onClose")))
-        let leftButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: Selector(("goBack")))
+        let leftButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(UIWebView.goBack))
         
         let navItem = UINavigationItem(title: "RM Checkout")
         navItem.rightBarButtonItem = rightButton
@@ -104,7 +104,5 @@ class BrowserController: UIViewController {
         self.view = webPage
         self.modalPresentationStyle = .overCurrentContext
         self.modalTransitionStyle = .coverVertical
-        
-        return self
     }
 }
