@@ -13,7 +13,10 @@ class BrowserController: UIViewController {
     var checkout: Checkout!
     var url: String = ""
     var urlObservation: NSKeyValueObservation?
-    
+    var navbar: UINavigationBar!
+    var webPage: UIView!
+    var webView: WKWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,16 +45,20 @@ class BrowserController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @objc func goBack() {
+        if webView.canGoBack {
+            webView.goBack()
+        } else {
+            self.checkout.onClose()
+        }
+    }
+    
     func open() -> UIViewController {
-        var navbar: UINavigationBar!
-        var webPage: UIView!
-        var webView: WKWebView!
-        
         /* ******************************* TOP NAVIGATION BAR ******************************* */
         navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: checkout.viewController.view.frame.size.width, height: 44))
         
         let rightButton = UIBarButtonItem(title: "Close", style: UIBarButtonItem.Style.plain, target: self.checkout, action: Selector(("onClose")))
-        let leftButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: webView, action: #selector(webView!.goBack))
+        let leftButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: Selector(("goBack")))
         
         let navItem = UINavigationItem(title: "RM Checkout")
         navItem.rightBarButtonItem = rightButton
@@ -83,13 +90,10 @@ class BrowserController: UIViewController {
         webView.load(URLRequest(url: web))
         webView.allowsBackForwardNavigationGestures = true
         urlObservation = webView.observe(\.url, changeHandler: { (webView, change) in
-            if webView.url?.path.contains("/v1/transaction/web/alipay") ?? true {
-                self.checkout.onClose()
-            }
             if webView.url?.path.contains("/v1/transaction/web/close") ?? true {
                 self.checkout.onClose()
             }
-            if webView.url?.path.contains("/h5/cashierPay.htm") ?? true {
+            if webView.url?.path.contains("/v1/transaction/web/alipay") ?? true {
                 self.checkout.onClose()
             }
         })

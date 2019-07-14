@@ -34,7 +34,6 @@ public final class Checkout {
     
     @objc func onClose() {
         self.openBrowserView.dismiss(animated: true, completion: nil)
-        sleep(3)
         self.inAppWebView = false
     }
     
@@ -44,6 +43,17 @@ public final class Checkout {
         body["code"] = checkoutId as AnyObject
     
         do {
+            let queryOrder = try QueryOrder(checkoutId: checkoutId, env: self.env)
+            if let error = queryOrder.error() {
+                result.onPaymentFailed(error: error)
+                return
+            }
+            
+            if queryOrder.isPaymentSuccess() {
+                result.onPaymentSuccess(transaction: queryOrder.getTransaction())
+                return
+            }
+            
             let url: String = Domain(self.env).getPaymentGatewayURL() + "/v1/transaction/mobile"
             let (statusCode, data) = try HttpClient().request(url: url, method: "POST", body: body)
             if statusCode > 204 {

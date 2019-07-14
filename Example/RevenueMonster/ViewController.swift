@@ -113,9 +113,9 @@ class ViewController: UIViewController {
         body["redirectURL"] = "revenuemonster://" as AnyObject
         body["notifyURL"] = "https://dev-rm-api.ap.ngrok.io" as AnyObject
 
-        try Checkout(viewController: self).setEnv(Env.DEVELOPMENT)
+        try Checkout(viewController: self).setEnv(Env.SANDBOX)
             .setWeChatAppID("")
-            .pay(method: method, checkoutId: "1562583354320509688", result: Result(viewController: self))
+            .pay(method: method, checkoutId: "1563083653404130120", result: Result(viewController: self))
 
 //        do {
 //            let url: String = "https://sb-api.revenuemonster.my/demo/payment/online"
