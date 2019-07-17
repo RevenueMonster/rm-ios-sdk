@@ -94,6 +94,10 @@ public final class Checkout {
         
         DispatchQueue.global(qos: .background).async {
             for _ in 1...800 {
+                if self.inAppWebView {
+                    sleep(1)
+                    continue
+                }
                 var isOrderStatusInProcess: Bool = false
 
                 if !self.isLeaveApp {
