@@ -17,7 +17,7 @@ RevenueMonster is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RevenueMonster', '0.1-beta.2'
+pod 'RevenueMonster', '0.1-beta.3'
 ```
 
 ## Author
@@ -25,7 +25,9 @@ pod 'RevenueMonster', '0.1-beta.2'
 Mohamed Yussuf, yussuf@revenuemonster.my
 
 ## License
+
 ### Checkout Sample Code
+
 ```swift
 do {
 	try Checkout(viewController: self).setEnv(Env.SANDBOX)
@@ -53,15 +55,19 @@ class Result: PaymentResult {
 
 ## WeChatPay In-App Payment
 
-###  Register an App ID on WeChat Open Platform
+### Register an App ID on WeChat Open Platform
+
 Before started to do wechat payments, first need to register an App ID on WeChat Open Platform.
 
 ##### Add your WeChat App ID to URL scheme:
+
 1. Go to `Targets > Info > URL type > URL Scheme`.
 2. Add a new `URL Scheme` :
+
 - For identifier set `weixin`
 - For URL Schemes set your App ID.
 
-##### Register `weixin` in your  `URL types`:
+##### Register `weixin` in your `URL types`:
+
 1. Go to your `Info.plist`
 2. Add `weixin` to `LSApplicationQueriesSchemes`
