@@ -13,6 +13,7 @@
 		792662325B4E4CD69B9FCB5104C84DD2 /* RevenueMonster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5984273E2BC0B47FF2BCD79C36A7BA92 /* RevenueMonster-dummy.m */; };
 		7FDCEF3A086F3E9B1932AA2059611F35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		8B8CFB60740D9F82BEE5AED2F62428B4 /* RevenueMonster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8912163E05942F5BE6BE247022BCE87C /* RevenueMonster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90016F8722E5A49E00FD13CD /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07922E5A1250041E189 /* AlipaySDK.framework */; };
 		903088552285D39B000245A9 /* PaymentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088532285D39B000245A9 /* PaymentResult.swift */; };
 		903088562285D39B000245A9 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088542285D39B000245A9 /* Checkout.swift */; };
 		903088592285D41B000245A9 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088582285D41B000245A9 /* HttpClient.swift */; };
@@ -34,6 +35,12 @@
 		906B9A4422828498003E873E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A4322828497003E873E /* libz.tbd */; };
 		906B9A46228284A1003E873E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A45228284A1003E873E /* libsqlite3.tbd */; };
 		906B9A48228284AA003E873E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A47228284AA003E873E /* libc++.tbd */; };
+		907AFC3022E8C0CD00A7910D /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907AFC2F22E8C0CD00A7910D /* Scheme.swift */; };
+		9090C07022E59C4B0041E189 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C06F22E59C4B0041E189 /* QuartzCore.framework */; };
+		9090C07222E59C550041E189 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07122E59C550041E189 /* CoreText.framework */; };
+		9090C07422E59C5F0041E189 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07322E59C5F0041E189 /* CoreGraphics.framework */; };
+		9090C07622E59C700041E189 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07522E59C700041E189 /* UIKit.framework */; };
+		9090C07822E59CA50041E189 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07722E59CA50041E189 /* CoreMotion.framework */; };
 		90E3066122D33BED00008D49 /* BrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3066022D33BEC00008D49 /* BrowserController.swift */; };
 		9620315E90F7F3BDFDC8C1AD847A5C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		A1AC9226BD59AD366EDCE55CDE852AC5 /* Pods-RevenueMonster_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC82F86E8A43B20E678A8C62812BEB3 /* Pods-RevenueMonster_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -104,7 +111,14 @@
 		906B9A4322828497003E873E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 		906B9A45228284A1003E873E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		906B9A47228284AA003E873E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		907AFC2F22E8C0CD00A7910D /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
 		90858870228283F300B2BF3F /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = ../../RevenueMonster/WeChatSDK/libWeChatSDK.a; sourceTree = "<group>"; };
+		9090C06F22E59C4B0041E189 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		9090C07122E59C550041E189 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		9090C07322E59C5F0041E189 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		9090C07522E59C700041E189 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9090C07722E59CA50041E189 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		9090C07922E5A1250041E189 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = ../../RevenueMonster/Library/AlipaySDK/AlipaySDK.framework; sourceTree = "<group>"; };
 		90E3066022D33BEC00008D49 /* BrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserController.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96A145C95BE53D5A1C952EB38B720568 /* Pods-RevenueMonster_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RevenueMonster_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -139,6 +153,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90016F8722E5A49E00FD13CD /* AlipaySDK.framework in Frameworks */,
+				9090C07822E59CA50041E189 /* CoreMotion.framework in Frameworks */,
+				9090C07622E59C700041E189 /* UIKit.framework in Frameworks */,
+				9090C07422E59C5F0041E189 /* CoreGraphics.framework in Frameworks */,
+				9090C07222E59C550041E189 /* CoreText.framework in Frameworks */,
+				9090C07022E59C4B0041E189 /* QuartzCore.framework in Frameworks */,
 				906B9A48228284AA003E873E /* libc++.tbd in Frameworks */,
 				906B9A46228284A1003E873E /* libsqlite3.tbd in Frameworks */,
 				906B9A4422828498003E873E /* libz.tbd in Frameworks */,
@@ -278,6 +298,7 @@
 				9030886822875161000245A9 /* Env.swift */,
 				9030886A22875306000245A9 /* Method.swift */,
 				9030886C22875497000245A9 /* Status.swift */,
+				907AFC2F22E8C0CD00A7910D /* Scheme.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -311,6 +332,12 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9090C07922E5A1250041E189 /* AlipaySDK.framework */,
+				9090C07722E59CA50041E189 /* CoreMotion.framework */,
+				9090C07522E59C700041E189 /* UIKit.framework */,
+				9090C07322E59C5F0041E189 /* CoreGraphics.framework */,
+				9090C07122E59C550041E189 /* CoreText.framework */,
+				9090C06F22E59C4B0041E189 /* QuartzCore.framework */,
 				906B9A47228284AA003E873E /* libc++.tbd */,
 				906B9A45228284A1003E873E /* libsqlite3.tbd */,
 				906B9A4322828497003E873E /* libz.tbd */,
@@ -487,6 +514,7 @@
 				9030886922875161000245A9 /* Env.swift in Sources */,
 				903088592285D41B000245A9 /* HttpClient.swift in Sources */,
 				903088562285D39B000245A9 /* Checkout.swift in Sources */,
+				907AFC3022E8C0CD00A7910D /* Scheme.swift in Sources */,
 				903088642286655F000245A9 /* ErrorException.swift in Sources */,
 				9030886022865D8D000245A9 /* Order.swift in Sources */,
 				903088712288046F000245A9 /* Date.swift in Sources */,
@@ -545,7 +573,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK";
 				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -565,7 +593,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INCLUDE_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/WeChatSDK";
+				SWIFT_INCLUDE_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/WeChatSDK ${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -834,7 +862,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK";
 				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -854,7 +882,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INCLUDE_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/WeChatSDK";
+				SWIFT_INCLUDE_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/WeChatSDK ${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
