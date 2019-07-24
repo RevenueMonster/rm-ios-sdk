@@ -53,4 +53,8 @@ public final class QueryOrder {
     public func getTransaction() -> Transaction {
         return self.transaction;
     }
+    
+    public func getTransactionRedirectUrl() -> String {
+        return self.transaction.redirectUrl;
+    }
 }

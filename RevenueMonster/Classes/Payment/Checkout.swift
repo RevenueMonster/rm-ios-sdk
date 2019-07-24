@@ -8,8 +8,10 @@
 import Foundation
 import WeChatSDK
 import WebKit
+import AlipaySDK
 
 public final class Checkout {
+    var isAppInstalled: Bool = false
     var wechatAppID: String = ""
     var env: Env = Env.PRODUCTION
     var isLeaveApp: Bool = false
@@ -17,43 +19,49 @@ public final class Checkout {
     var leaveTimestamp: Int64!
     var viewController: UIViewController!
     var openBrowserView: UIViewController!
+    var redirectURL: String = ""
 
     public init(viewController: UIViewController) {
         self.viewController = viewController
     }
-    
+
     public func setWeChatAppID(_ wechatAppID: String) -> Checkout {
         self.wechatAppID = wechatAppID
         return self
     }
-    
+
     public func setEnv(_ env: Env) -> Checkout {
         self.env = env
         return self
     }
-    
+
     @objc func onClose() {
         self.openBrowserView.dismiss(animated: true, completion: nil)
         self.inAppWebView = false
     }
-    
+
     public func pay(method: Method, checkoutId: String, result: PaymentResult) throws {
+        self.isAppInstalled = Scheme(self.env).isInstalled(method)
+
         var body: [String: AnyObject] = [:]
         body["method"] = method.toString() as AnyObject
         body["code"] = checkoutId as AnyObject
-    
+        body["isAppInstalled"] = self.isAppInstalled as AnyObject
+
         do {
             let queryOrder = try QueryOrder(checkoutId: checkoutId, env: self.env)
             if let error = queryOrder.error() {
                 result.onPaymentFailed(error: error)
                 return
             }
-            
+
             if queryOrder.isPaymentSuccess() {
                 result.onPaymentSuccess(transaction: queryOrder.getTransaction())
                 return
             }
-            
+
+            self.redirectURL = queryOrder.getTransactionRedirectUrl()
+
             let url: String = Domain(self.env).getPaymentGatewayURL() + "/v1/transaction/mobile"
             let (statusCode, data) = try HttpClient().request(url: url, method: "POST", body: body)
             if statusCode > 204 {
@@ -63,10 +71,10 @@ public final class Checkout {
                 result.onPaymentFailed(error: paymentError)
                 return
             }
-            
+
             let response = try convertToDictionary(text: String(describing: String(data: data!, encoding: .utf8)!))
             let item = response!["item"] as? Dictionary<String, AnyObject>
-            
+
             switch method {
             case .WECHATPAY_MY:
                 let prepayId = item?["url"] as! String
@@ -74,7 +82,7 @@ public final class Checkout {
                 self.leaveTimestamp = Date().timestamp()
                 try weChatPayMalaysia(prepayId)
                 break
-            case .ALIPAY_CN, .GRABPAY_MY, .TNG_MY:
+            case .GRABPAY_MY, .TNG_MY:
                 let prepayId = item?["url"] as! String
                 self.isLeaveApp = true
                 self.leaveTimestamp = Date().timestamp()
@@ -85,13 +93,19 @@ public final class Checkout {
                 let url = item?["url"] as! String
                 self.isLeaveApp = true
                 self.leaveTimestamp = Date().timestamp()
-                self.openURL(scheme: url)
+                try self.openURL(url)
+                break
+            case .ALIPAY_CN:
+                let prepayId = item?["url"] as! String
+                self.isLeaveApp = true
+                self.leaveTimestamp = Date().timestamp()
+                try self.alipayChina(prepayId)
                 break
             }
         } catch {
             throw error
         }
-        
+
         DispatchQueue.global(qos: .background).async {
             for _ in 1...800 {
                 if self.inAppWebView {
@@ -136,35 +150,55 @@ public final class Checkout {
             }
         }
     }
-    
+
     private func openBrowser(_ prepayID: String) throws {
         openBrowserView = BrowserController(checkout: self, url: prepayID)
         self.viewController.present(openBrowserView, animated: true, completion: nil)
     }
-    
+
     private func weChatPayMalaysia(_ prepayID: String) throws {
         if (!WXApi.registerApp(wechatAppID)) {
             throw CheckoutError.invalidWeChatAppID
         }
-        
+
         if (!WXApi.isWXAppInstalled()) {
             throw CheckoutError.wechatAppNotInstalled
         }
-        
+
         var dict : Dictionary = Dictionary<AnyHashable,Any>()
         dict["prepay_id"] = prepayID
-        
+
         let i = WXOpenBusinessWebViewReq()
         i.businessType = 7
         i.queryInfoDic = dict
-        
+
         if !WXApi.send(i) {
             throw CheckoutError.failToInitiatePayment
         }
     }
-    
-    private func openURL(scheme: String) {
-        if let url = URL(string: scheme) {
+
+    private func alipayChina(_ prepayID: String) throws {
+        if !self.isAppInstalled || prepayID.contains("https://") {
+            try self.openBrowser(prepayID)
+            return
+        }
+
+        self.viewController.viewDidLoad()
+
+        let decodedData = Data(base64Encoded: prepayID)!
+        let decodedString = String(data: decodedData, encoding: .utf8)!
+
+        AlipaySDK.defaultService().payOrder(decodedString, fromScheme: self.redirectURL, callback: nil)
+        print("hello world")
+    }
+
+    private func openURL(_ url: String) throws {
+        if !self.isAppInstalled || url.contains("https://") {
+            try self.openBrowser(url)
+            return
+        }
+
+        if let url = URL(string: url) {
             if #available(iOS 10, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             } else {

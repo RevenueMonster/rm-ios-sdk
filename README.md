@@ -17,7 +17,7 @@ RevenueMonster is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RevenueMonster', '0.1-beta.3'
+pod 'RevenueMonster', '0.1-beta.4'
 ```
 
 ## Author
@@ -52,6 +52,9 @@ class Result: PaymentResult {
 	}
 }
 ```
+##### Register `weixin`, `alipay`, `boostapp` in your `URL types`:
+1. Go to your `Info.plist`
+2. Add `weixin`, `alipay`, `boostapp` to `LSApplicationQueriesSchemes`
 
 ## WeChatPay In-App Payment
 
@@ -66,8 +69,3 @@ Before started to do wechat payments, first need to register an App ID on WeChat
 
 - For identifier set `weixin`
 - For URL Schemes set your App ID.
-
-##### Register `weixin` in your `URL types`:
-
-1. Go to your `Info.plist`
-2. Add `weixin` to `LSApplicationQueriesSchemes`

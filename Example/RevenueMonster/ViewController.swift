@@ -110,31 +110,29 @@ class ViewController: UIViewController {
     private func checkout(method: RevenueMonster.Method) throws {
         var body: [String: AnyObject] = [:]
         body["type"] = "MOBILE_PAYMENT" as AnyObject
-        body["redirectURL"] = "revenuemonster://" as AnyObject
+        body["redirectURL"] = "revenuemonster://test" as AnyObject
         body["notifyURL"] = "https://dev-rm-api.ap.ngrok.io" as AnyObject
 
-        try Checkout(viewController: self).setEnv(Env.SANDBOX)
-            .setWeChatAppID("")
-            .pay(method: method, checkoutId: "1563085632759636617", result: Result(viewController: self))
+        do {
+            let url: String = "https://sb-api.revenuemonster.my/demo/payment/online"
 
-//        do {
-//            let url: String = "https://sb-api.revenuemonster.my/demo/payment/online"
-//
-//            let (statusCode, data) = try self.request(url: url, method: "POST", body: body)
-//            if statusCode == 200 {
-//                let response = try self.convertToDictionary(text: String(describing: String(data: data!, encoding: .utf8)!))
-//                let item = response!["item"] as? Dictionary<String, AnyObject>
-//
-//                do {
-//
-//                } catch {
-//                    print("error: \(error.localizedDescription).")
-//                }
-//            }
-//        }
-//        catch {
-//            print("error: \(error.localizedDescription).")
-//        }
+            let (statusCode, data) = try self.request(url: url, method: "POST", body: body)
+            if statusCode == 200 {
+                let response = try self.convertToDictionary(text: String(describing: String(data: data!, encoding: .utf8)!))
+                let item = response!["item"] as? Dictionary<String, AnyObject>
+
+                do {
+                    try Checkout(viewController: self).setEnv(Env.SANDBOX)
+                        .setWeChatAppID("wx62173edb65003c7c")
+                        .pay(method: method, checkoutId: item?["checkoutId"] as! String, result: Result(viewController: self))
+                } catch {
+                    print("error: \(error.localizedDescription).")
+                }
+            }
+        }
+        catch {
+            print("error: \(error.localizedDescription).")
+        }
     }
 
 //    override func didReceiveMemoryWarning() {

@@ -54,9 +54,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8x-8A-OwI">
-                                <rect key="frame" x="146" y="426" width="85" height="30"/>
+                                <rect key="frame" x="142" y="426" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GrabPay MY"/>
+                                <state key="normal" title="GRABPAY MY"/>
                                 <connections>
                                     <action selector="onGrabPay:" destination="vXZ-lx-hvc" eventType="touchDown" id="NoJ-yX-U8g"/>
                                 </connections>
