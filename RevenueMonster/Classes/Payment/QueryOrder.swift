@@ -19,6 +19,7 @@ public final class QueryOrder {
         
         var body: [String: AnyObject] = [:]
         body["code"] = checkoutId as AnyObject
+        body["clearCache"] = true as AnyObject
         
         let url: String = Domain(self.env).getPaymentGatewayURL() + "/v1/online/transaction/status"
         
