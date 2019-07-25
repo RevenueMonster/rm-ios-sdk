@@ -13,7 +13,6 @@
 		792662325B4E4CD69B9FCB5104C84DD2 /* RevenueMonster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5984273E2BC0B47FF2BCD79C36A7BA92 /* RevenueMonster-dummy.m */; };
 		7FDCEF3A086F3E9B1932AA2059611F35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		8B8CFB60740D9F82BEE5AED2F62428B4 /* RevenueMonster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8912163E05942F5BE6BE247022BCE87C /* RevenueMonster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		90016F8722E5A49E00FD13CD /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07922E5A1250041E189 /* AlipaySDK.framework */; };
 		903088552285D39B000245A9 /* PaymentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088532285D39B000245A9 /* PaymentResult.swift */; };
 		903088562285D39B000245A9 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088542285D39B000245A9 /* Checkout.swift */; };
 		903088592285D41B000245A9 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088582285D41B000245A9 /* HttpClient.swift */; };
@@ -36,6 +35,7 @@
 		906B9A46228284A1003E873E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A45228284A1003E873E /* libsqlite3.tbd */; };
 		906B9A48228284AA003E873E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A47228284AA003E873E /* libc++.tbd */; };
 		907AFC3022E8C0CD00A7910D /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907AFC2F22E8C0CD00A7910D /* Scheme.swift */; };
+		907AFC3122E9781A00A7910D /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07922E5A1250041E189 /* AlipaySDK.framework */; };
 		9090C07022E59C4B0041E189 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C06F22E59C4B0041E189 /* QuartzCore.framework */; };
 		9090C07222E59C550041E189 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07122E59C550041E189 /* CoreText.framework */; };
 		9090C07422E59C5F0041E189 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07322E59C5F0041E189 /* CoreGraphics.framework */; };
@@ -153,7 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90016F8722E5A49E00FD13CD /* AlipaySDK.framework in Frameworks */,
+				907AFC3122E9781A00A7910D /* AlipaySDK.framework in Frameworks */,
 				9090C07822E59CA50041E189 /* CoreMotion.framework in Frameworks */,
 				9090C07622E59C700041E189 /* UIKit.framework in Frameworks */,
 				9090C07422E59C5F0041E189 /* CoreGraphics.framework in Frameworks */,
