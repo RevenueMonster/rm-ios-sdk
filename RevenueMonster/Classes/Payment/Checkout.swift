@@ -8,7 +8,7 @@
 import Foundation
 import WeChatSDK
 import WebKit
-import AlipaySDK
+import Alipay
 
 public final class Checkout {
     var isAppInstalled: Bool = false
