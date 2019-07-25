@@ -189,7 +189,6 @@ public final class Checkout {
         let decodedString = String(data: decodedData, encoding: .utf8)!
 
         AlipaySDK.defaultService().payOrder(decodedString, fromScheme: self.redirectURL, callback: nil)
-        print("hello world")
     }
 
     private func openURL(_ url: String) throws {
