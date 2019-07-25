@@ -1,5 +1,5 @@
-module AlipaySDK {
-  header "AlipaySDK.h"
+module Alipay {
+  header "Alipay.h"
 
   export *
 }

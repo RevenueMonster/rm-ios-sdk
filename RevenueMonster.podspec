@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RevenueMonster'
-  s.version          = '0.1-beta.5'
+  s.version          = '0.1-beta.4'
   s.summary          = 'RM SDK for IOS'
 
   s.description      = <<-DESC
-		RM SDK for IOS. Supported payment method WeChatPay Malaysia
+		RM SDK for IOS. Supported payment method WeChatPay Malaysia, Boost, GrabPay, Tng, Alipay China
                        DESC
   s.homepage         = 'https://revenuemonster.my'
   s.license          = { :type => 'BSD 3-Clause "New" or "Revised" License', :file => 'LICENSE' }
@@ -27,11 +27,12 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'RevenueMonster/Library/**/*.modulemap'
   s.private_header_files = 'RevenueMonster/Library/**/*.h'
   s.libraries = 'z', 'c++', 'sqlite3'
-  s.frameworks = 'SystemConfiguration', 'CoreTelephony', 'CFNetwork', 'Security', 'Foundation', 'AlipaySDK', 'CoreMotion', 'UIKit', 'CoreGraphics', 'CoreText', 'QuartzCore'
+  s.vendored_frameworks = ['RevenueMonster/Library/AlipaySDK/AlipaySDK.framework']
+	s.frameworks = 'SystemConfiguration', 'CoreTelephony', 'CFNetwork', 'Security', 'Foundation', 'AlipaySDK', 'CoreMotion', 'UIKit', 'CoreGraphics', 'CoreText', 'QuartzCore'
   s.vendored_libraries = 'RevenueMonster/Library/WeChatSDK/libWeChatSDK.a'
   s.xcconfig = {
-      'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/RevenueMonster/Library/*',
 			'FRAMEWORK_SEARCH_PATHS' => '${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK',
+      'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/RevenueMonster/Library/**',
       'OTHER_LDFLAGS' => '-all_load'
   }
 end
