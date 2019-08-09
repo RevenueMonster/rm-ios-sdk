@@ -75,29 +75,27 @@ public final class Checkout {
             let response = try convertToDictionary(text: String(describing: String(data: data!, encoding: .utf8)!))
             let item = response!["item"] as? Dictionary<String, AnyObject>
 
+            self.isLeaveApp = true
+
             switch method {
             case .WECHATPAY_MY:
                 let prepayId = item?["url"] as! String
-                self.isLeaveApp = true
                 self.leaveTimestamp = Date().timestamp()
                 try weChatPayMalaysia(prepayId)
                 break
             case .GRABPAY_MY, .TNG_MY:
                 let prepayId = item?["url"] as! String
-                self.isLeaveApp = true
                 self.leaveTimestamp = Date().timestamp()
                 self.inAppWebView = true
                 try openBrowser(prepayId)
                 break
             case .BOOST_MY:
                 let url = item?["url"] as! String
-                self.isLeaveApp = true
                 self.leaveTimestamp = Date().timestamp()
                 try self.openURL(url)
                 break
             case .ALIPAY_CN:
                 let prepayId = item?["url"] as! String
-                self.isLeaveApp = true
                 self.leaveTimestamp = Date().timestamp()
                 try self.alipayChina(prepayId)
                 break
@@ -179,10 +177,11 @@ public final class Checkout {
 
     private func alipayChina(_ prepayID: String) throws {
         if !self.isAppInstalled || prepayID.contains("https://") {
+            self.inAppWebView = true
             try self.openBrowser(prepayID)
             return
         }
-
+        
         self.viewController.viewDidLoad()
 
         let decodedData = Data(base64Encoded: prepayID)!
