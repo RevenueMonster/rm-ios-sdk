@@ -573,13 +573,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/AlipaySDK\"";
 				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/WeChatSDK";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/WeChatSDK\"";
 				MODULEMAP_FILE = "Target Support Files/RevenueMonster/RevenueMonster.modulemap";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -862,13 +862,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/AlipaySDK\"";
 				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/WeChatSDK";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/WeChatSDK\"";
 				MODULEMAP_FILE = "Target Support Files/RevenueMonster/RevenueMonster.modulemap";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
