@@ -73,19 +73,21 @@ class BrowserController: UIViewController {
         webPage = UIView()
         webPage.backgroundColor = UIColor.white
         webPage.translatesAutoresizingMaskIntoConstraints = false
-        
         webPage.frame = CGRect(x: 0, y: 0, width: self.checkout.viewController.view.frame.size.width, height: self.checkout.viewController.view.frame.size.height)
+         
         if #available(iOS 11.0, *) {
-            let guide = self.checkout.viewController.view.safeAreaLayoutGuide
-            navbar.frame = CGRect(x: 0, y:  guide.layoutFrame.minY, width: checkout.viewController.view.frame.size.width, height: 50)
+            let top = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+            navbar.frame = CGRect(x: 0, y:  top, width: checkout.viewController.view.frame.size.width, height: 50)
         }
         webPage.addSubview(navbar)
+
         /* ******************************* TOP NAVIGATION BAR ******************************* */
         
         /* ******************************* WEB VIEW ******************************* */
         let webConfiguration = WKWebViewConfiguration()
-        let customFrame = CGRect(x: 0, y: navbar.frame.maxY, width: self.checkout.viewController.view.frame.size.width, height: self.checkout.viewController.view.frame.size.height - 44)
+        let customFrame = CGRect(x: 0, y: navbar.frame.maxY, width: self.checkout.viewController.view.frame.size.width, height: self.checkout.viewController.view.frame.size.height - navbar.frame.maxY)
         webView =  WKWebView (frame: customFrame , configuration: webConfiguration)
+        
         let web = URL(string: url)!
         webView.load(URLRequest(url: web))
         webView.allowsBackForwardNavigationGestures = true
@@ -100,7 +102,6 @@ class BrowserController: UIViewController {
         
         webPage.addSubview(webView)
         /* ******************************* WEB VIEW ******************************* */
-        
         self.view = webPage
         self.modalPresentationStyle = .overCurrentContext
         self.modalTransitionStyle = .coverVertical
