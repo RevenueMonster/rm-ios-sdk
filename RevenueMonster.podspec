@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RevenueMonster'
-  s.version          = '0.1-beta.9'
+  s.version          = '0.1-beta.7'
   s.summary          = 'RM SDK for IOS'
 
   s.description      = <<-DESC
@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 	s.platform = :ios, '8.0'
   s.source_files = 'RevenueMonster/**/*'
+  s.exclude_files = "RevenueMonster/**/*.plist"
   s.preserve_paths = 'RevenueMonster/Library/**/*.modulemap'
   s.private_header_files = 'RevenueMonster/Library/**/*.h'
   s.libraries = 'z', 'c++', 'sqlite3'
