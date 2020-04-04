@@ -122,7 +122,7 @@ class ViewController: UIViewController {
                 let item = response!["item"] as? Dictionary<String, AnyObject>
 
                 do {
-                    try Checkout(viewController: self).setEnv(Env.DEVELOPMENT)
+                    try Checkout(viewController: self).setEnv(Env.SANDBOX)
                         .setWeChatAppID("")
                         .pay(method: method, checkoutId: item?["checkoutId"] as! String, result: Result(viewController: self))
                 } catch {
