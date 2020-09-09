@@ -216,7 +216,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = BDZ4N42FLM;
+						DevelopmentTeam = 8SQQV32J6L;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -227,7 +227,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = BDZ4N42FLM;
+						DevelopmentTeam = 8SQQV32J6L;
 						LastSwiftMigration = 1020;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -489,7 +489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BDZ4N42FLM;
+				DEVELOPMENT_TEAM = 8SQQV32J6L;
 				INFOPLIST_FILE = RevenueMonster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -507,7 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BDZ4N42FLM;
+				DEVELOPMENT_TEAM = 8SQQV32J6L;
 				INFOPLIST_FILE = RevenueMonster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -522,7 +522,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9807D7B99106FDD1BD0FDC85 /* Pods-RevenueMonster_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = BDZ4N42FLM;
+				DEVELOPMENT_TEAM = 8SQQV32J6L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -544,7 +544,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D295D324D30EA5E457E6C5A0 /* Pods-RevenueMonster_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = BDZ4N42FLM;
+				DEVELOPMENT_TEAM = 8SQQV32J6L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

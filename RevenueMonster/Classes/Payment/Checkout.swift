@@ -192,6 +192,7 @@ public final class Checkout {
 
     private func openURL(_ url: String) throws {
         if !self.isAppInstalled || url.contains("https://") {
+            self.inAppWebView = true
             try self.openBrowser(url)
             return
         }
