@@ -1,4 +1,4 @@
-//
+ //
 //  ViewController.swift
 //  RevenueMonster
 //
@@ -47,9 +47,41 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func onCheckout(_ sender: Any) {
+    @IBAction func onTNGPay(_ sender: Any) {
         do {
             try self.checkout(method: Method.TNG_MY)
+        } catch {
+            print("error: \(error.localizedDescription).")
+        }
+    }
+    
+    @IBAction func onRazerPay(_ sender: Any) {
+        do {
+            try self.checkout(method: Method.RAZERPAY_MY)
+        } catch {
+            print("error: \(error.localizedDescription).")
+        }
+    }
+    
+    @IBAction func onPrestoPay(_ sender: Any) {
+        do {
+            try self.checkout(method: Method.PRESTO_MY)
+        } catch {
+            print("error: \(error.localizedDescription).")
+        }
+    }
+    
+    @IBAction func onMCashPay(_ sender: Any) {
+        do {
+            try self.checkout(method: Method.MCASH_MY)
+        } catch {
+            print("error: \(error.localizedDescription).")
+        }
+    }
+    
+    @IBAction func onGoBiz(_ sender: Any) {
+        do {
+            try self.checkout(method: Method.GOBIZ_MY)
         } catch {
             print("error: \(error.localizedDescription).")
         }
@@ -112,6 +144,7 @@ class ViewController: UIViewController {
         body["type"] = "MOBILE_PAYMENT" as AnyObject
         body["redirectURL"] = "revenuemonster://test" as AnyObject
         body["notifyURL"] = "https://dev-rm-api.ap.ngrok.io" as AnyObject
+        body["amount"] = 120 as AnyObject
 
         do {
             let url: String = "https://sb-api.revenuemonster.my/demo/payment/online"
@@ -122,8 +155,9 @@ class ViewController: UIViewController {
                 let item = response!["item"] as? Dictionary<String, AnyObject>
 
                 do {
-                    try Checkout(viewController: self).setEnv(Env.SANDBOX)
+                    try Checkout(viewController: self).setEnv(Env.DEVELOPMENT)
                         .setWeChatAppID("")
+                        .setCardInfo(name: "", cardNo: "", cvcNo: "", expMonth: 1, expYear: 2020, countryCode: "MY")
                         .pay(method: method, checkoutId: item?["checkoutId"] as! String, result: Result(viewController: self))
                 } catch {
                     print("error: \(error.localizedDescription).")

@@ -98,6 +98,10 @@ class BrowserController: UIViewController {
             if webView.url?.path.contains("/v1/transaction/web/alipay") ?? true {
                 self.checkout.onClose()
             }
+            if webView.url?.path.contains("/v1/app/gobiz/complete") ?? true {
+                self.checkout.onClose()
+            }
+
         })
         
         webPage.addSubview(webView)
