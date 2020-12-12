@@ -17,7 +17,7 @@ RevenueMonster is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RevenueMonster', '0.1-beta.8'
+pod 'RevenueMonster', '0.1-beta.9'
 ```
 
 ## Author
@@ -27,12 +27,15 @@ Mohamed Yussuf, yussuf@revenuemonster.my
 ## License
 
 ### Checkout Sample Code
-
 ```swift
 do {
-	try Checkout(viewController: self).setEnv(Env.SANDBOX)
-		.setWeChatAppID	("<< WeChat Open Platform AppID >>")
-		.pay(method: Method.WECHATPAY_MY, checkoutId: "<<Get Checkout Id from API>>", result: Result())
+	try Checkout(viewController: self)
+		.setEnv(<<Environment Parameter>>) // set environment
+		.setWeChatAppID	("<< WeChat Open Platform AppID >>") // only use for wechatpay
+		.setCardInfo(name: "", cardNo: "", cvcNo: "", expMonth: 1, expYear: 2020, countryCode: "MY", isSave: true) // only use for new card 
+		.setToken(token: "<<Card Token>>",cvcNo: "<<Cvc No>>"). // only use if use existing card token
+		.setBankCode("<<Set Bank Code>>"). // only use for fpx, get the bank code from open api
+		.pay(method: <<Method Parameter>>, checkoutId: "<<Get Checkout Id from API>>", result: Result())
 } catch {
 		print("error: \(error.localizedDescription).")
 }
@@ -52,6 +55,24 @@ class Result: PaymentResult {
 	}
 }
 ```
+
+### Environment Parameter
+- SANDBOX      
+- PRODUCTION
+<br/>
+<br/>
+### Method Parameter
+- WECHATPAY_MY
+- TNG_MY
+- BOOST_MY
+- ALIPAY_CN
+- GRABPAY_MY
+- MCASH_MY
+- RAZERPAY_MY
+- PRESTO_MY
+- GOBIZ_MY
+- FPX_MY
+
 ##### Register `weixin`, `alipay`, `boostapp` in your `URL types`:
 1. Go to your `Info.plist`
 2. Add `weixin`, `alipay`, `boostapp` to `LSApplicationQueriesSchemes`
