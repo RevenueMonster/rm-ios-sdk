@@ -17,6 +17,7 @@ public enum Method: String {
     case PRESTO_MY = "PRESTO_MY"
     case MCASH_MY = "MCASH_MY"
     case GOBIZ_MY = "GOBIZ_MY"
+    case FPX_MY = "FPX_MY"
 
     public func toString() -> String {
         return self.rawValue

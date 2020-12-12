@@ -26,6 +26,8 @@ public final class Checkout {
     var cardExpMonth: Int32 = 0
     var cardExpYear: Int32 = 0
     var cardCountryCode: String = ""
+    var bankCode: String = ""
+    var isSave: Bool = false
     var isTokenization: Bool = false
 
     public init(viewController: UIViewController) {
@@ -47,13 +49,14 @@ public final class Checkout {
         self.inAppWebView = false
     }
     
-    public func setCardInfo(name: String, cardNo: String, cvcNo: String, expMonth: Int32, expYear: Int32, countryCode: String) -> Checkout {
+    public func setCardInfo(name: String, cardNo: String, cvcNo: String, expMonth: Int32, expYear: Int32, countryCode: String, isSave: Bool) -> Checkout {
         self.cardName = name
         self.cardNo = cardNo
         self.cardCvcNo = cvcNo
         self.cardExpMonth = expMonth
         self.cardExpYear = expYear
         self.cardCountryCode = countryCode
+        self.isSave = isSave
         return self
     }
     
@@ -61,6 +64,11 @@ public final class Checkout {
         self.isTokenization = true
         self.cardNo = token
         self.cardCvcNo = cvcNo
+        return self
+    }
+    
+    public func setBankCode(_ bankCode: String) -> Checkout {
+        self.bankCode = bankCode
         return self
     }
 
@@ -71,9 +79,8 @@ public final class Checkout {
         body["method"] = method.toString() as AnyObject
         body["code"] = checkoutId as AnyObject
         body["isAppInstalled"] = self.isAppInstalled as AnyObject
-        
-        print("meow: ", method, cardNo)
-        
+        body["bankCode"] = self.bankCode as AnyObject
+
         if method == .GOBIZ_MY && self.cardNo != "" {
             var card: [String: AnyObject] = [:]
             card["isToken"] = self.isTokenization as AnyObject
@@ -83,6 +90,7 @@ public final class Checkout {
             card["month"] = self.cardExpMonth as AnyObject
             card["year"] = self.cardExpYear as AnyObject
             card["countryCode"] = self.cardCountryCode as AnyObject
+            card["isSave"] = self.isSave as AnyObject
             body["card"] = card as AnyObject
         }
 
@@ -121,7 +129,7 @@ public final class Checkout {
                 self.leaveTimestamp = Date().timestamp()
                 try weChatPayMalaysia(prepayId)
                 break
-            case .GRABPAY_MY, .TNG_MY, .RAZERPAY_MY, .MCASH_MY, .PRESTO_MY:
+            case .GRABPAY_MY, .TNG_MY, .RAZERPAY_MY, .MCASH_MY, .PRESTO_MY, .GOBIZ_MY, .FPX_MY:
                 let prepayId = item?["url"] as! String
                 self.leaveTimestamp = Date().timestamp()
                 self.inAppWebView = true
@@ -136,12 +144,6 @@ public final class Checkout {
                 let prepayId = item?["url"] as! String
                 self.leaveTimestamp = Date().timestamp()
                 try self.alipayChina(prepayId)
-                break
-            case .GOBIZ_MY:
-                let prepayId = item?["url"] as! String
-                self.leaveTimestamp = Date().timestamp()
-                self.inAppWebView = true
-                try openBrowser(prepayId)
                 break
             }
         } catch {

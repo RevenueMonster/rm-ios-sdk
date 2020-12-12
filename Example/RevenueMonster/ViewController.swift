@@ -155,9 +155,9 @@ class ViewController: UIViewController {
                 let item = response!["item"] as? Dictionary<String, AnyObject>
 
                 do {
-                    try Checkout(viewController: self).setEnv(Env.DEVELOPMENT)
+                    try Checkout(viewController: self).setEnv(Env.SANDBOX)
                         .setWeChatAppID("")
-                        .setCardInfo(name: "", cardNo: "", cvcNo: "", expMonth: 1, expYear: 2020, countryCode: "MY")
+                        .setCardInfo(name: "", cardNo: "", cvcNo: "", expMonth: 1, expYear: 2020, countryCode: "MY", isSave: true)
                         .pay(method: method, checkoutId: item?["checkoutId"] as! String, result: Result(viewController: self))
                 } catch {
                     print("error: \(error.localizedDescription).")
