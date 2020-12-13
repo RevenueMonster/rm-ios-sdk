@@ -3,5 +3,7 @@
 
 #import <AlipaySDK/AlipaySDK.h>
 #import <AlipaySDK/APayAuthInfo.h>
+#import <AlipaySDK/AFServiceResponse.h>
+#import <AlipaySDK/AFServiceCenter.h>
 
 #endif
