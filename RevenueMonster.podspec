@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RevenueMonster'
-  s.version          = '1.2'
+  s.version          = '1.3'
   s.summary          = 'RM SDK for IOS'
 
   s.description      = <<-DESC
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.libraries = 'z', 'c++', 'sqlite3'
   s.vendored_frameworks = ['RevenueMonster/Library/AlipaySDK/AlipaySDK.framework']
 	s.frameworks = 'SystemConfiguration', 'CoreTelephony', 'CFNetwork', 'Security', 'Foundation', 'AlipaySDK', 'CoreMotion', 'UIKit', 'CoreGraphics', 'CoreText', 'QuartzCore'
-  s.vendored_libraries = 'RevenueMonster/Library/WeChatSDK/libWeChatSDK.a'
+  s.vendored_libraries = ['RevenueMonster/Library/WeChatSDK/libWeChatSDK.a']
   s.xcconfig = {
 			'FRAMEWORK_SEARCH_PATHS' => '${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK',
       'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/RevenueMonster/Library/**',
