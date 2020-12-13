@@ -9,11 +9,13 @@
 
 ////////////////////////////////////////////////////////
 ///////////////// 支付宝标准版本支付SDK ///////////////////
-/////////// version:15.5.7  motify:2018.10.25///////////
+///////// version:15.7.3  motify:2020.05.22///////////
 ////////////////////////////////////////////////////////
 
 #import <UIKit/UIKit.h>
 #import "APayAuthInfo.h"
+#import "AFServiceCenter.h"
+#import "AFServiceResponse.h"
 
 typedef void(^CompletionBlock)(NSDictionary *resultDic);
 
@@ -99,8 +101,8 @@ typedef enum {
  *
  *  @param infoStr          授权请求信息字串
  *  @param schemeStr        调用授权的app注册在info.plist中的scheme
- *  @param completionBlock  授权结果回调，若在授权过程中，调用方应用被系统终止，则此block无效，
-                            需要调用方在appDelegate中调用processAuth_V2Result:standbyCallback:方法获取授权结果
+ *  @param completionBlock  授权结果回调，需要调用方在appDelegate中调用processAuth_V2Result:standbyCallback:方法获取授权结果
+ *                          若在授权过程中,调用方应用被系统终止则此block无效(此时会调用'processAuth_V2Result:standbyCallback:'传入的standbyCallback)
  */
 - (void)auth_V2WithInfo:(NSString *)infoStr
              fromScheme:(NSString *)schemeStr
@@ -110,7 +112,7 @@ typedef enum {
  *  处理支付宝app授权后跳回商户app携带的授权结果Url
  *
  *  @param resultUrl        支付宝app返回的授权结果url
- *  @param completionBlock  授权结果回调
+ *  @param completionBlock  授权结果回调,用于处理跳转支付宝授权过程中商户APP被系统终止的情况
  */
 - (void)processAuth_V2Result:(NSURL *)resultUrl
              standbyCallback:(CompletionBlock)completionBlock;
@@ -154,26 +156,13 @@ typedef enum {
                    fromScheme:(NSString *)schemeStr
                      callback:(CompletionBlock)completionBlock;
 
-/**
- *  从h5链接中获取订单串接口（自版本15.4.0起已废弃，请使用payInterceptorWithUrl...）
- *
- *  @param urlStr           需要被拦截解析的 h5 链接
- *
- *  @return                 从url中获取到的支付订单信息字串 (若返回空，则该 h5 链接非 h5 支付链接)
- */
-- (NSString*)fetchOrderInfoFromH5PayUrl:(NSString*)urlStr;
+
 
 /**
- *  h5链接获取到的订单串支付接口（自版本15.4.0起已废弃，请使用payInterceptorWithUrl...）
+ *  不对webview可用性进行检查
  *
- *  @param orderStr       支付订单信息字串
- *  @param schemeStr      调用支付的app注册在info.plist中的scheme
- *  @param completionBlock 支付结果回调Block，用于wap支付结果回调（非跳转钱包支付）
  */
-- (void)payUrlOrder:(NSString *)orderStr
-         fromScheme:(NSString *)schemeStr
-           callback:(CompletionBlock)completionBlock;
-
+- (void)disableWebviewCheck;
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////支付宝 tid 相关信息获取接口/////////////////////////////////////////////
@@ -219,4 +208,22 @@ typedef enum {
  *  @param block 更新请求结果回调
  */
 - (void)fetchSdkConfigWithBlock:(void(^)(BOOL success))block;
+
+
+typedef void(^APLogBlock)(NSString *log);
+
+/**
+*   接收AlipaySDK的log信息
+*
+*  @param logBlock 打印log的回调block
+*/
++ (void)startLogWithBlock:(APLogBlock)logBlock;
+
+/**
+*   停止输出log,会释放logBlock
+*
+*
+*/
++ (void)stopLog;
+
 @end

@@ -156,7 +156,7 @@ class ViewController: UIViewController {
 
                 do {
                     try Checkout(viewController: self).setEnv(Env.SANDBOX)
-                        .setWeChatAppID("")
+                        .setWeChatAppID(wechatAppID: "wx62173edb65003c7c", universalLink: "https://dev-rm-api.ap.ngrok.io/app/")
                         .setCardInfo(name: "", cardNo: "", cvcNo: "", expMonth: 1, expYear: 2020, countryCode: "MY", isSave: true)
                         .pay(method: method, checkoutId: item?["checkoutId"] as! String, result: Result(viewController: self))
                 } catch {

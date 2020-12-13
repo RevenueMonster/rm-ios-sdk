@@ -17,7 +17,7 @@ RevenueMonster is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RevenueMonster', '0.1-beta.9'
+pod 'RevenueMonster', '0.2-beta.1'
 ```
 
 ## Author
@@ -31,7 +31,7 @@ Mohamed Yussuf, yussuf@revenuemonster.my
 do {
 	try Checkout(viewController: self)
 		.setEnv(<<Environment Parameter>>) // set environment
-		.setWeChatAppID	("<< WeChat Open Platform AppID >>") // only use for wechatpay
+		.setWeChatAppID(wechatAppID: "<<WeChat Open Platform AppID>>", universalLink: "<<Universal Link>>")
 		.setCardInfo(name: "", cardNo: "", cvcNo: "", expMonth: 1, expYear: 2020, countryCode: "MY", isSave: true) // only use for new card 
 		.setToken(token: "<<Card Token>>",cvcNo: "<<Cvc No>>"). // only use if use existing card token
 		.setBankCode("<<Set Bank Code>>"). // only use for fpx, get the bank code from open api
@@ -55,6 +55,7 @@ class Result: PaymentResult {
 	}
 }
 ```
+<br />
 
 ### Environment Parameter
 - SANDBOX      
@@ -73,20 +74,46 @@ class Result: PaymentResult {
 - GOBIZ_MY
 - FPX_MY
 
-##### Register `weixin`, `alipay`, `boostapp` in your `URL types`:
+#### Register `weixin`, `weixinULAPI`, `alipay`, `boostapp` in the "URL type" of the "info" tab:
 1. Go to your `Info.plist`
-2. Add `weixin`, `alipay`, `boostapp` to `LSApplicationQueriesSchemes`
+2. Add `weixin`, `weixinULAPI`, `alipay`, `boostapp` to `LSApplicationQueriesSchemes`
+
+<br>
+<br>
 
 ## WeChatPay In-App Payment
 
-### Register an App ID on WeChat Open Platform
 
-Before started to do wechat payments, first need to register an App ID on WeChat Open Platform.
+#### 1. Create a developer account on the WeChat Open Platform:
+- Go to https://open.weixin.qq.com/ and click Log In.
+- Navigate to Admin Center > Mobile Application > Create Mobile Application, and input name, short introduction, official website, bundle id and universal link.
 
-##### Add your WeChat App ID to URL scheme:
+<br>
+
+#### 2. Register `weixin`, `weixinULAPI` in the "URL type" of the "info" tab:
+1. Go to your `Info.plist`
+2. Add `weixin`, `weixinULAPI`, `alipay`, `boostapp` to `LSApplicationQueriesSchemes`
+
+<br>
+
+#### 3. Add your WeChat App ID to URL scheme:
 
 1. Go to `Targets > Info > URL type > URL Scheme`.
 2. Add a new `URL Scheme` :
+	- For identifier set `weixin`
+	- For URL Schemes set your App ID.
 
-- For identifier set `weixin`
-- For URL Schemes set your App ID.
+
+<br>
+
+#### 4. Pass the app id and universal link when trigger payment:
+```swift 
+	do {
+		try Checkout(viewController: self)
+			.setEnv(<<Environment Parameter>>) // set environment
+			.setWeChatAppID(wechatAppID: "<<WeChat Open Platform AppID>>", universalLink: "<<Universal Link>>")
+			.pay(method: <<Method Parameter>>, checkoutId: "<<Get Checkout Id from API>>", result: Result())
+	} catch {
+			print("error: \(error.localizedDescription).")
+	}
+```

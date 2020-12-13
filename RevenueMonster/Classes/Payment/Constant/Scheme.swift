@@ -45,10 +45,10 @@ public class Scheme {
     }
     
     private func getAlipay() -> String {
-        if self.env == Env.PRODUCTION {
-            return "alipay://"
-        }
-        return ""
+//        if self.env == Env.PRODUCTION {
+//            return "alipay://"
+//        }
+        return "alipay://"
     }
     
     private func getWeChatPay() -> String {

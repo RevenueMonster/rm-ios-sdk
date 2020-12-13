@@ -57,8 +57,8 @@ class BrowserController: UIViewController {
         /* ******************************* TOP NAVIGATION BAR ******************************* */
         navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: checkout.viewController.view.frame.size.width, height: 44))
         
-        let rightButton = UIBarButtonItem(title: "Close", style: UIBarButtonItem.Style.plain, target: self.checkout, action: Selector(("onClose")))
-        let leftButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(UIWebView.goBack))
+        let rightButton = UIBarButtonItem(title: "Close", style: UIBarButtonItem.Style.plain, target: self.checkout, action: #selector(Checkout.onClose))
+        let leftButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(webView.goBack))
         
         let navItem = UINavigationItem(title: "RM Checkout")
         navItem.rightBarButtonItem = rightButton

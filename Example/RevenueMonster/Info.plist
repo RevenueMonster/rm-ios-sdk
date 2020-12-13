@@ -27,7 +27,17 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string></string>
+				<string>wx62173edb65003c7c</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>revenuemonster</string>
 			</array>
 		</dict>
 	</array>
@@ -36,6 +46,7 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weixin</string>
+		<string>weixinULAPI</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -44,6 +55,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
