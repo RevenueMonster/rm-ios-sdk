@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RevenueMonster'
-  s.version          = '0.2-beta.1'
+  s.version          = '1.0'
   s.summary          = 'RM SDK for IOS'
 
   s.description      = <<-DESC
-		RM SDK for IOS. Supported payment method WeChatPay Malaysia, Boost, GrabPay, Tng, Alipay China
+		RM SDK for IOS. Supported payment method WeChatPay Malaysia, Boost, GrabPay, Tng, Alipay China, PrestoPay, RazerPay, MCash, FPX, GoBiz
                        DESC
   s.homepage         = 'https://revenuemonster.my'
   s.license          = { :type => 'BSD 3-Clause "New" or "Revised" License', :file => 'LICENSE' }

@@ -17,7 +17,7 @@ RevenueMonster is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RevenueMonster', '0.2-beta.1'
+pod 'RevenueMonster', '1.0'
 ```
 
 ## Author
