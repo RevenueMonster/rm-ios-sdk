@@ -571,6 +571,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/WeChatSDK\"";
+				MARKETING_VERSION = 1.2;
 				MODULEMAP_FILE = "Target Support Files/RevenueMonster/RevenueMonster.modulemap";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -618,6 +619,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.2;
 				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -656,6 +658,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.2;
 				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -761,6 +764,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.2;
 				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -864,6 +868,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/WeChatSDK\"";
+				MARKETING_VERSION = 1.2;
 				MODULEMAP_FILE = "Target Support Files/RevenueMonster/RevenueMonster.modulemap";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -912,6 +917,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.2;
 				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
