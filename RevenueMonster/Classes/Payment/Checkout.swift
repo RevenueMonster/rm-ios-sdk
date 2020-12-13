@@ -13,6 +13,7 @@ import Alipay
 public final class Checkout {
     var isAppInstalled: Bool = false
     var wechatAppID: String = ""
+    var universalLink: String = ""
     var env: Env = Env.PRODUCTION
     var isLeaveApp: Bool = false
     var inAppWebView: Bool = false
@@ -34,8 +35,9 @@ public final class Checkout {
         self.viewController = viewController
     }
 
-    public func setWeChatAppID(_ wechatAppID: String) -> Checkout {
+    public func setWeChatAppID(wechatAppID: String, universalLink: String) -> Checkout {
         self.wechatAppID = wechatAppID
+        self.universalLink = universalLink
         return self
     }
 
@@ -201,7 +203,7 @@ public final class Checkout {
     }
 
     private func weChatPayMalaysia(_ prepayID: String) throws {
-        if (!WXApi.registerApp(wechatAppID)) {
+        if (!WXApi.registerApp(wechatAppID, universalLink: universalLink)) {
             throw CheckoutError.invalidWeChatAppID
         }
 
@@ -215,10 +217,8 @@ public final class Checkout {
         let i = WXOpenBusinessWebViewReq()
         i.businessType = 7
         i.queryInfoDic = dict
-
-        if !WXApi.send(i) {
-            throw CheckoutError.failToInitiatePayment
-        }
+        
+        return WXApi.send(i)
     }
 
     private func alipayChina(_ prepayID: String) throws {

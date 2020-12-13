@@ -43,6 +43,7 @@
 		77541B61B5BA9FFC8C9891D5 /* Pods-RevenueMonster_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevenueMonster_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example.release.xcconfig"; sourceTree = "<group>"; };
 		909A056722BF2D0A0090A611 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		909A056A22BFD1760090A611 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		90CEF46E2585F55500599B39 /* RevenueMonster_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RevenueMonster_Example.entitlements; sourceTree = "<group>"; };
 		9807D7B99106FDD1BD0FDC85 /* Pods-RevenueMonster_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevenueMonster_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFF9981E321619CC2855E52C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D295D324D30EA5E457E6C5A0 /* Pods-RevenueMonster_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevenueMonster_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				90CEF46E2585F55500599B39 /* RevenueMonster_Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for RevenueMonster */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -487,13 +489,14 @@
 			baseConfigurationReference = F75B2AFBB5053E5649B316ED /* Pods-RevenueMonster_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = RevenueMonster_Example.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SQQV32J6L;
 				INFOPLIST_FILE = RevenueMonster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.revenuemonster-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revenuemonster.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -505,13 +508,14 @@
 			baseConfigurationReference = 77541B61B5BA9FFC8C9891D5 /* Pods-RevenueMonster_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = RevenueMonster_Example.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SQQV32J6L;
 				INFOPLIST_FILE = RevenueMonster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.revenuemonster-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revenuemonster.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
