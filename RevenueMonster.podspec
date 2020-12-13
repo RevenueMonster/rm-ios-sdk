@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/RevenueMonster/RM-IOS.git', :tag => 'v' +  s.version.to_s }
 
 
-  s.ios.deployment_target = '8.0'
-	s.platform = :ios, '8.0'
+  s.ios.deployment_target = '9.0'
+	s.platform = :ios, '9.0'
   s.source_files = 'RevenueMonster/**/*'
-  s.exclude_files = "RevenueMonster/**/*.plist"
+  s.exclude_files = ["RevenueMonster/**/*.plist"]
   s.preserve_paths = 'RevenueMonster/Library/**/*.modulemap'
   s.private_header_files = 'RevenueMonster/Library/**/*.h'
   s.libraries = 'z', 'c++', 'sqlite3'
@@ -36,4 +36,8 @@ Pod::Spec.new do |s|
       'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/RevenueMonster/Library/**',
       'OTHER_LDFLAGS' => '-all_load'
   }
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end

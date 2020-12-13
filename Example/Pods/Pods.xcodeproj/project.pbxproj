@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		03BF3688DB36C60F6607CB1F1B3BF423 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		61C9553B1DB4110E45E7E038348634B8 /* Pods-RevenueMonster_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23882692078E4B739EE3A246EE751CA3 /* Pods-RevenueMonster_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FF0B393765E5FE3EE2BF20DED0E1F18 /* Pods-RevenueMonster_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A70AF693188C692F0BC7EB252BC15F9 /* Pods-RevenueMonster_Example-dummy.m */; };
-		792662325B4E4CD69B9FCB5104C84DD2 /* RevenueMonster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5984273E2BC0B47FF2BCD79C36A7BA92 /* RevenueMonster-dummy.m */; };
 		7FDCEF3A086F3E9B1932AA2059611F35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		8B8CFB60740D9F82BEE5AED2F62428B4 /* RevenueMonster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8912163E05942F5BE6BE247022BCE87C /* RevenueMonster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		903088552285D39B000245A9 /* PaymentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088532285D39B000245A9 /* PaymentResult.swift */; };
@@ -44,7 +42,6 @@
 		90E3066122D33BED00008D49 /* BrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3066022D33BEC00008D49 /* BrowserController.swift */; };
 		9620315E90F7F3BDFDC8C1AD847A5C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		A1AC9226BD59AD366EDCE55CDE852AC5 /* Pods-RevenueMonster_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC82F86E8A43B20E678A8C62812BEB3 /* Pods-RevenueMonster_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7232CDAFDD5F32F84148B72426CFC96 /* Pods-RevenueMonster_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2150B37832E1A95A0024F1FFF88BE0 /* Pods-RevenueMonster_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -503,7 +500,6 @@
 				9030887522880A87000245A9 /* PaymentError.swift in Sources */,
 				9030886B22875306000245A9 /* Method.swift in Sources */,
 				90308873228807E4000245A9 /* QueryOrder.swift in Sources */,
-				792662325B4E4CD69B9FCB5104C84DD2 /* RevenueMonster-dummy.m in Sources */,
 				9030887722881C19000245A9 /* Converter.swift in Sources */,
 				903088552285D39B000245A9 /* PaymentResult.swift in Sources */,
 				9030885E22865BA9000245A9 /* Transaction.swift in Sources */,
@@ -523,7 +519,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FF0B393765E5FE3EE2BF20DED0E1F18 /* Pods-RevenueMonster_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +526,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7232CDAFDD5F32F84148B72426CFC96 /* Pods-RevenueMonster_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +568,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/WeChatSDK\"";
 				MODULEMAP_FILE = "Target Support Files/RevenueMonster/RevenueMonster.modulemap";
@@ -863,7 +857,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/WeChatSDK\"";
 				MODULEMAP_FILE = "Target Support Files/RevenueMonster/RevenueMonster.modulemap";

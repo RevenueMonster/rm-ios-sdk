@@ -2,7 +2,8 @@ name: deploy_to_cocoapods
 
 on:
   push:
-    branches: [ master ]
+    tags:
+      - '*'
 
 jobs:
   build:
