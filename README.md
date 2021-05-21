@@ -33,8 +33,8 @@ do {
 		.setEnv(<<Environment Parameter>>) // set environment
 		.setWeChatAppID(wechatAppID: "<<WeChat Open Platform AppID>>", universalLink: "<<Universal Link>>")
 		.setCardInfo(name: "", cardNo: "", cvcNo: "", expMonth: 1, expYear: 2020, countryCode: "MY", isSave: true) // only use for new card 
-		.setToken(token: "<<Card Token>>",cvcNo: "<<Cvc No>>"). // only use if use existing card token
-		.setBankCode("<<Set Bank Code>>"). // only use for fpx, get the bank code from open api
+		.setToken(token: "<<Card Token>>",cvcNo: "<<Cvc No>>") // only use if use existing card token
+		.setBankCode("<<Set Bank Code>>") // only use for fpx, get the bank code from open api
 		.pay(method: <<Method Parameter>>, checkoutId: "<<Get Checkout Id from API>>", result: Result())
 } catch {
 		print("error: \(error.localizedDescription).")
