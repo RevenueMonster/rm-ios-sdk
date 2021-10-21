@@ -131,7 +131,8 @@ public final class Checkout {
                 self.leaveTimestamp = Date().timestamp()
                 try weChatPayMalaysia(prepayId)
                 break
-            case .GRABPAY_MY, .TNG_MY, .RAZERPAY_MY, .MCASH_MY, .PRESTO_MY, .GOBIZ_MY, .FPX_MY:
+            case .GRABPAY_MY, .TNG_MY, .RAZERPAY_MY, .MCASH_MY, .PRESTO_MY, .GOBIZ_MY, .FPX_MY,
+                .SHOPEEPAY_MY,.ZAPP_MY, .PAYDEE_MY, .ALIPAYPLUS_MY, .SENHENGPAY_MY:
                 let prepayId = item?["url"] as! String
                 self.leaveTimestamp = Date().timestamp()
                 self.inAppWebView = true

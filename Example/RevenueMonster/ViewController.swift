@@ -86,6 +86,46 @@ class ViewController: UIViewController {
             print("error: \(error.localizedDescription).")
         }
     }
+    
+    @IBAction func onPaydee(_ sender: Any) {
+        do {
+            try self.checkout(method: Method.PAYDEE_MY)
+        } catch {
+            print("error: \(error.localizedDescription).")
+        }
+    }
+    
+    @IBAction func onZapp(_ sender: Any) {
+        do {
+            try self.checkout(method: Method.ZAPP_MY)
+        } catch {
+            print("error: \(error.localizedDescription).")
+        }
+    }
+    
+    @IBAction func onShopeePay(_ sender: Any) {
+        do {
+            try self.checkout(method: Method.SHOPEEPAY_MY)
+        } catch {
+            print("error: \(error.localizedDescription).")
+        }
+    }
+    
+    @IBAction func onAlipayPlus(_ sender: Any) {
+        do {
+            try self.checkout(method: Method.ALIPAYPLUS_MY)
+        } catch {
+            print("error: \(error.localizedDescription).")
+        }
+    }
+    
+    @IBAction func onSenHengPay(_ sender: Any) {
+        do {
+            try self.checkout(method: Method.SENHENGPAY_MY)
+        } catch {
+            print("error: \(error.localizedDescription).")
+        }
+    }
 
     private func convertToDictionary(text: String) throws -> [String: Any]? {
         if let data = text.data(using: .utf8) {
