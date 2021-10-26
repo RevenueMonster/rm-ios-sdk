@@ -1,12 +1,17 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/RevenueMonster"
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/RevenueMonster" "${PODS_ROOT}/../../RevenueMonster/Library/AlipaySDK" ${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RevenueMonster/RevenueMonster.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -all_load -framework "RevenueMonster"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/RevenueMonster/RevenueMonster.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" "${PODS_ROOT}/../../RevenueMonster/Library/WeChatSDK" /usr/lib/swift
+OTHER_LDFLAGS = $(inherited) -ObjC -all_load -l"c++" -l"sqlite3" -l"z" -framework "AlipaySDK" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreMotion" -framework "CoreTelephony" -framework "CoreText" -framework "Foundation" -framework "QuartzCore" -framework "RevenueMonster" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
-SWIFT_INCLUDE_PATHS = $(inherited) ${PODS_TARGET_SRCROOT}/RevenueMonster/Classes/WeChatSDK
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+SWIFT_INCLUDE_PATHS = $(inherited) ${PODS_TARGET_SRCROOT}/RevenueMonster/Library/**
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

@@ -10,11 +10,6 @@
 #endif
 #endif
 
-#import "WechatAuthSDK.h"
-#import "WXApi.h"
-#import "WXApiObject.h"
-#import "Alipay.h"
-
 
 FOUNDATION_EXPORT double RevenueMonsterVersionNumber;
 FOUNDATION_EXPORT const unsigned char RevenueMonsterVersionString[];

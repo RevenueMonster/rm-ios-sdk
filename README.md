@@ -73,6 +73,11 @@ class Result: PaymentResult {
 - PRESTO_MY
 - GOBIZ_MY
 - FPX_MY
+- PAYDEE_MY
+- ZAPP_MY
+- SHOPEEPAY_MY
+- ALIPAYPLUS_MY
+- SENHENGPAY_MY
 
 #### Register `weixin`, `weixinULAPI`, `alipay`, `boostapp` in the "URL type" of the "info" tab:
 1. Go to your `Info.plist`

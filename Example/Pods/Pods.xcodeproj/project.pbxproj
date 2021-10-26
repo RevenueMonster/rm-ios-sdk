@@ -7,402 +7,527 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03BF3688DB36C60F6607CB1F1B3BF423 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		61C9553B1DB4110E45E7E038348634B8 /* Pods-RevenueMonster_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23882692078E4B739EE3A246EE751CA3 /* Pods-RevenueMonster_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FDCEF3A086F3E9B1932AA2059611F35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		8B8CFB60740D9F82BEE5AED2F62428B4 /* RevenueMonster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8912163E05942F5BE6BE247022BCE87C /* RevenueMonster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		903088552285D39B000245A9 /* PaymentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088532285D39B000245A9 /* PaymentResult.swift */; };
-		903088562285D39B000245A9 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088542285D39B000245A9 /* Checkout.swift */; };
-		903088592285D41B000245A9 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088582285D41B000245A9 /* HttpClient.swift */; };
-		9030885E22865BA9000245A9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030885D22865BA9000245A9 /* Transaction.swift */; };
-		9030886022865D8D000245A9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030885F22865D8D000245A9 /* Order.swift */; };
-		903088642286655F000245A9 /* ErrorException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088632286655F000245A9 /* ErrorException.swift */; };
-		9030886922875161000245A9 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030886822875161000245A9 /* Env.swift */; };
-		9030886B22875306000245A9 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030886A22875306000245A9 /* Method.swift */; };
-		9030886D22875497000245A9 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030886C22875497000245A9 /* Status.swift */; };
-		9030886F228757D3000245A9 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030886E228757D3000245A9 /* Domain.swift */; };
-		903088712288046F000245A9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903088702288046F000245A9 /* Date.swift */; };
-		90308873228807E4000245A9 /* QueryOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90308872228807E4000245A9 /* QueryOrder.swift */; };
-		9030887522880A87000245A9 /* PaymentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030887422880A87000245A9 /* PaymentError.swift */; };
-		9030887722881C19000245A9 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030887622881C19000245A9 /* Converter.swift */; };
-		906B9A3C2282846C003E873E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A3B2282846C003E873E /* Security.framework */; };
-		906B9A3E22828480003E873E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A3D22828480003E873E /* SystemConfiguration.framework */; };
-		906B9A4022828487003E873E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A3F22828486003E873E /* CoreTelephony.framework */; };
-		906B9A422282848D003E873E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A412282848D003E873E /* CFNetwork.framework */; };
-		906B9A4422828498003E873E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A4322828497003E873E /* libz.tbd */; };
-		906B9A46228284A1003E873E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A45228284A1003E873E /* libsqlite3.tbd */; };
-		906B9A48228284AA003E873E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B9A47228284AA003E873E /* libc++.tbd */; };
-		907AFC3022E8C0CD00A7910D /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907AFC2F22E8C0CD00A7910D /* Scheme.swift */; };
-		907AFC3122E9781A00A7910D /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07922E5A1250041E189 /* AlipaySDK.framework */; };
-		9090C07022E59C4B0041E189 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C06F22E59C4B0041E189 /* QuartzCore.framework */; };
-		9090C07222E59C550041E189 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07122E59C550041E189 /* CoreText.framework */; };
-		9090C07422E59C5F0041E189 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07322E59C5F0041E189 /* CoreGraphics.framework */; };
-		9090C07622E59C700041E189 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07522E59C700041E189 /* UIKit.framework */; };
-		9090C07822E59CA50041E189 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9090C07722E59CA50041E189 /* CoreMotion.framework */; };
-		90E3066122D33BED00008D49 /* BrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3066022D33BEC00008D49 /* BrowserController.swift */; };
-		9620315E90F7F3BDFDC8C1AD847A5C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		A1AC9226BD59AD366EDCE55CDE852AC5 /* Pods-RevenueMonster_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC82F86E8A43B20E678A8C62812BEB3 /* Pods-RevenueMonster_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BF038AF8C205F4F1678C24067F3B42A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D423AA88ECCB796C94017F470657BB9E /* UIKit.framework */; };
+		114833D7255F6DBCEC93FC5C1B7BAD56 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03879C0146846EFB70FE579FF3FFC5BB /* Date.swift */; };
+		14E8253034C2676B7867B31B51C044B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F5E2911DC630F7F7A03772791477F3 /* QuartzCore.framework */; };
+		1BA1BF49F4D7DC76E5EA181DF42E9173 /* RevenueMonster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F060EDBAFD50068DFDF0F80DCA90B49 /* RevenueMonster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FF71A84EEC3947AC39DFA68BCAFB0D1 /* AlipaySDK in Sources */ = {isa = PBXBuildFile; fileRef = 6E310458608B02BBBE8A027E6387DDDF /* AlipaySDK */; };
+		206135DAB0C5D87193F64DACEEBA69FD /* AlipaySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = DD2559FDF82BA16BA2707D2565E2EB3C /* AlipaySDK.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		220A65887EFEC385998128F3446DA57B /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F7205048B92CECFE48614FB31B603 /* Checkout.swift */; };
+		31845A3F3394CC6353E1BE2542091C70 /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D193790FC99B06E50ADA6528F6D6ED4 /* WXApiObject.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		380630248FBC03F76634E0F93B6A79CE /* PaymentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038A60528F81937F728CB65537C99EC /* PaymentError.swift */; };
+		3BD65699CEC719640C2EAC0414478C6C /* Alipay.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A282C703BD140D4520E062E87796DB5 /* Alipay.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		48D0303462E5D623CDC6BD8BF2EBCCD3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62785F916979647BE321FA1C7CEF783 /* CFNetwork.framework */; };
+		53D305AAC0261DEA8149F6B5CADE41D8 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC090D4CF548A286FD5DB8E46F4D87B4 /* Converter.swift */; };
+		55F55FD2A4C7E69D10F94F8C503D09F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC0E175E7A2CDAED4F5D24585F1789F /* Foundation.framework */; };
+		5D936E1AE2617CA28CFDE149F3B4C953 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FDD4089AA219226E43FB798EAA39FC /* HttpClient.swift */; };
+		6DD868C58A7AD19D01E4E904969DDB4C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A94E9005EF9A5930B4AF6C90A8BA9 /* Transaction.swift */; };
+		757AE195F4BEC761D77A1A6FBF486F9D /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225DAD1BC89EA93E05422C1A7CD987A3 /* AlipaySDK.framework */; };
+		75E1C7CF6C6F0BA452FB2A032491B955 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072485E95D6C47508FDE67EE6A1DF9F /* Domain.swift */; };
+		7FC6DBF095AE341ED464B9AEC8147295 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CF266ACE5F3CD174ECA98D8D5CDD26 /* WXApi.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8007D5903A1990269152EE4024A4F43F /* libWeChatSDK.a in Sources */ = {isa = PBXBuildFile; fileRef = D9AA578C86415EF0E82233906B5716AA /* libWeChatSDK.a */; };
+		806562D1F4BAA9837FF56EEE7E20D312 /* Pods-RevenueMonster_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7735DC9EB15837D2DF21D865C672C3E0 /* Pods-RevenueMonster_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81C01DDE4B2703B800AC8B36EDEC751E /* RevenueMonster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 126EFDA3E6B1E4A134D960449F299F76 /* RevenueMonster-dummy.m */; };
+		8A9BF32F5506BD5BD036DAB1525C4D73 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D0A48833CA7E0D3C98B0D63B0AC28 /* Status.swift */; };
+		8B4920531917B05F10B91CD801797453 /* APayAuthInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A463A920805D62EF2E9305563C0FF33 /* APayAuthInfo.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8E96330F4401FE5C7509F0112DEF839F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17BFAABBC6174D0297CEEC6648C23B /* Order.swift */; };
+		91C1CCEFAB6CE66D6DB659F414B28647 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3913676F95C8CCCE1DF69F616D5B4150 /* Security.framework */; };
+		A16CA9D6E89F7E7260C700BFE407DBFE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0552890B98231565BD89B8683C8D5ABF /* CoreText.framework */; };
+		A3EE824EDF7CE68BC37DD0F9DC22F2D4 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B4C73A3BC353F68D0E33B0A0BEC4D /* Env.swift */; };
+		A6568044E18BBC4D3ADE1B718477FE10 /* WechatAuthSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = C4AEE0E22B6AE7A83584EA3411FEA2FA /* WechatAuthSDK.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B523B9FEB0920530C10ED2DF9A604497 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC0E175E7A2CDAED4F5D24585F1789F /* Foundation.framework */; };
+		B87EAB6B18691C13B595ECCAA42D52D5 /* Pods-RevenueMonster_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F5FAA78C87722A7220028D688422BEB /* Pods-RevenueMonster_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3C8209AE78F0443CE40025D344F141F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCBF73D802982147E7C34A794B1F2C5 /* SystemConfiguration.framework */; };
+		C7BB08F8E03810CC8FD75A66C6F0261D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96581714B51F7B4D0217EC0EAA3FE80D /* CoreTelephony.framework */; };
+		CCDFAAA7BC41BC9B4F0CAB4560BB3305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC0E175E7A2CDAED4F5D24585F1789F /* Foundation.framework */; };
+		D552D19EDF8FACC5D9B2870283FB56E1 /* BrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111A5BC11D63421006E4369978B07F94 /* BrowserController.swift */; };
+		D60B9D312D9F396A2A53E1DC519D9DBD /* PaymentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771B5E7BADF9E250B92E384652A4CD7C /* PaymentResult.swift */; };
+		D9437AB7CF542E7E741BC7C1102059CF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E2919CD281AFC2A6DA4402D7BC9D13 /* CoreMotion.framework */; };
+		DCFF7350E7812060C3E0FFDFB62A5FB6 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5965E8FB514639F0C969908A5A6B09C5 /* Scheme.swift */; };
+		DD58CD088B64A0F386E48E2D8A1D14D6 /* Pods-RevenueMonster_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB81352B837756461D193510EC01345 /* Pods-RevenueMonster_Example-dummy.m */; };
+		DE7471AFEBFEE8A3819A908BC8DD7FAE /* Pods-RevenueMonster_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6856DE9A5250EB6D69BCFD218CB2BF /* Pods-RevenueMonster_Tests-dummy.m */; };
+		E2A8B3B30BBB45B14263E6CBB940FC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9384F51D27625CC2068CDCA49E64D1 /* CoreGraphics.framework */; };
+		EE0D3060C4614092546552B0CC36CDEE /* QueryOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C97104B4DADBC7F35A71F2AE3B6A98 /* QueryOrder.swift */; };
+		F144C0ABB25726201EF6E5268E9889B6 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = B654EE78906A3C2A9B1F0A7134D7B43C /* module.modulemap */; };
+		F66D7190716A57513FA7FA9E591EBFE9 /* ErrorException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEB92F1275DFBAD8A0B83F315E95BE /* ErrorException.swift */; };
+		FB570916757EF2A20662239DEDCB0C52 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E02EB6214A94E92B32DF9A2E39A26B1 /* Method.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D05E7830C8045F6BB91CC41EB3B80AD8 /* PBXContainerItemProxy */ = {
+		7C4622A4571A329FD8E47131C73F510C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 76DA6742DF79402863573B754F904467;
+			remoteGlobalIDString = 87F42BFC2BED1F640591719B13898A9C;
 			remoteInfo = RevenueMonster;
 		};
-		FB30C6775FF82B220C320BDBE1EC2C4A /* PBXContainerItemProxy */ = {
+		91EFD47694D741E1BD0DDE681CC79122 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CDFE721F73EF54B1FAABEBB2BC7817D3;
+			remoteGlobalIDString = 7452CAA744A8FAF3D12E0DE199F9D2C5;
 			remoteInfo = "Pods-RevenueMonster_Example";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A70AF693188C692F0BC7EB252BC15F9 /* Pods-RevenueMonster_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RevenueMonster_Example-dummy.m"; sourceTree = "<group>"; };
-		225FF1B466DA251681251973928098A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23882692078E4B739EE3A246EE751CA3 /* Pods-RevenueMonster_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RevenueMonster_Tests-umbrella.h"; sourceTree = "<group>"; };
-		2410DB2BAC88E521B16887054AB6E8E6 /* Pods-RevenueMonster_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RevenueMonster_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		35DC48CE1BED6565698AF102FBD5020B /* RevenueMonster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RevenueMonster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		37CD7D323D19EA5CD07A7DFBD220C06A /* Pods-RevenueMonster_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RevenueMonster_Example.release.xcconfig"; sourceTree = "<group>"; };
-		393EAF4FF9061FFA704992A2A7747F6D /* Pods_RevenueMonster_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevenueMonster_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BDF4592578B963ED2C711EA12112F61 /* Pods-RevenueMonster_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RevenueMonster_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		3D2150B37832E1A95A0024F1FFF88BE0 /* Pods-RevenueMonster_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RevenueMonster_Tests-dummy.m"; sourceTree = "<group>"; };
-		56E9DA9156D124B0EF467A37280AE906 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5984273E2BC0B47FF2BCD79C36A7BA92 /* RevenueMonster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RevenueMonster-dummy.m"; sourceTree = "<group>"; };
-		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5AEDE25A213C8E5874927F72840B5880 /* Pods-RevenueMonster_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RevenueMonster_Example-resources.sh"; sourceTree = "<group>"; };
-		5FB67197890AAECFA483A5DFF252EBF5 /* Pods-RevenueMonster_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RevenueMonster_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		63D2972781E4F040D85B80ACFB8063AB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		652B81F4EDA09553157E4F5401C6B718 /* Pods-RevenueMonster_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RevenueMonster_Example.modulemap"; sourceTree = "<group>"; };
-		6DC82F86E8A43B20E678A8C62812BEB3 /* Pods-RevenueMonster_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RevenueMonster_Example-umbrella.h"; sourceTree = "<group>"; };
-		6FCC78C1CAB40DB8F91123C54B01BD61 /* Pods-RevenueMonster_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RevenueMonster_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		724078B8319C05198540D4C9AC2A4731 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75D7F23AB635252176B9D9EF7DE47FB7 /* RevenueMonster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RevenueMonster.modulemap; sourceTree = "<group>"; };
-		777527BE1FC6DAFBF3578C1784A6B801 /* Pods-RevenueMonster_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RevenueMonster_Tests.modulemap"; sourceTree = "<group>"; };
-		80D50704A84D99424538AEF28FC96F9D /* RevenueMonster.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = RevenueMonster.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		88939F2B1BC666E71D0EE37E094E6285 /* Pods-RevenueMonster_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RevenueMonster_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8912163E05942F5BE6BE247022BCE87C /* RevenueMonster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RevenueMonster-umbrella.h"; sourceTree = "<group>"; };
-		9030883A2283F998000245A9 /* Library */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Library; path = RevenueMonster/Library; sourceTree = "<group>"; };
-		903088532285D39B000245A9 /* PaymentResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResult.swift; sourceTree = "<group>"; };
-		903088542285D39B000245A9 /* Checkout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
-		903088582285D41B000245A9 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
-		9030885D22865BA9000245A9 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		9030885F22865D8D000245A9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		903088632286655F000245A9 /* ErrorException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorException.swift; sourceTree = "<group>"; };
-		9030886822875161000245A9 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
-		9030886A22875306000245A9 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
-		9030886C22875497000245A9 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		9030886E228757D3000245A9 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
-		903088702288046F000245A9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		90308872228807E4000245A9 /* QueryOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryOrder.swift; sourceTree = "<group>"; };
-		9030887422880A87000245A9 /* PaymentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentError.swift; sourceTree = "<group>"; };
-		9030887622881C19000245A9 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
-		906B9A3B2282846C003E873E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		906B9A3D22828480003E873E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		906B9A3F22828486003E873E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
-		906B9A412282848D003E873E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		906B9A4322828497003E873E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
-		906B9A45228284A1003E873E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
-		906B9A47228284AA003E873E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
-		907AFC2F22E8C0CD00A7910D /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
-		90858870228283F300B2BF3F /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = ../../RevenueMonster/WeChatSDK/libWeChatSDK.a; sourceTree = "<group>"; };
-		9090C06F22E59C4B0041E189 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		9090C07122E59C550041E189 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
-		9090C07322E59C5F0041E189 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		9090C07522E59C700041E189 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		9090C07722E59CA50041E189 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
-		9090C07922E5A1250041E189 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = ../../RevenueMonster/Library/AlipaySDK/AlipaySDK.framework; sourceTree = "<group>"; };
-		90E3066022D33BEC00008D49 /* BrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserController.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96A145C95BE53D5A1C952EB38B720568 /* Pods-RevenueMonster_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RevenueMonster_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		97F8CB216368283952BA759082832D30 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		AF95A5975A0F090E57352CE5ADD84711 /* Pods-RevenueMonster_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RevenueMonster_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C11E7FA868599F69C6046654301429B6 /* Pods-RevenueMonster_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RevenueMonster_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C38723EB846B1F8591C1646201DA03C4 /* Pods-RevenueMonster_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RevenueMonster_Tests-resources.sh"; sourceTree = "<group>"; };
-		D8E114B2C8125F9FDC9CEB8A3CB4A99E /* RevenueMonster.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RevenueMonster.xcconfig; sourceTree = "<group>"; };
-		EC5538AFE021B242CB05A4C0B5B77FC2 /* Pods-RevenueMonster_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RevenueMonster_Example-frameworks.sh"; sourceTree = "<group>"; };
-		ED3D183064EA1C19D7EE42D7450EB198 /* RevenueMonster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RevenueMonster-prefix.pch"; sourceTree = "<group>"; };
-		F1D643085001BDFA8058FC1C4F76D98B /* Pods_RevenueMonster_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevenueMonster_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03879C0146846EFB70FE579FF3FFC5BB /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		0473871FF9160D3CD2E6DC24D10CC0CC /* Pods-RevenueMonster_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RevenueMonster_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0552890B98231565BD89B8683C8D5ABF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		0F5FAA78C87722A7220028D688422BEB /* Pods-RevenueMonster_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RevenueMonster_Example-umbrella.h"; sourceTree = "<group>"; };
+		111A5BC11D63421006E4369978B07F94 /* BrowserController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BrowserController.swift; sourceTree = "<group>"; };
+		11DC02978AD2C6820592A4E733ED2667 /* RevenueMonster-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RevenueMonster-Info.plist"; sourceTree = "<group>"; };
+		126EFDA3E6B1E4A134D960449F299F76 /* RevenueMonster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RevenueMonster-dummy.m"; sourceTree = "<group>"; };
+		1A9B4C73A3BC353F68D0E33B0A0BEC4D /* Env.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		1B6856DE9A5250EB6D69BCFD218CB2BF /* Pods-RevenueMonster_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RevenueMonster_Tests-dummy.m"; sourceTree = "<group>"; };
+		2253846B9EA88CD3910D813E3F7C1FF6 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = RevenueMonster/Library/AlipaySDK/AlipaySDK.framework; sourceTree = "<group>"; };
+		225DAD1BC89EA93E05422C1A7CD987A3 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AlipaySDK.framework; sourceTree = DEVELOPER_DIR; };
+		257D3589A4311F73765BAE8F9119C7CF /* Pods-RevenueMonster_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RevenueMonster_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2760A99BEA7A72CEADF78836C3F14814 /* RevenueMonster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RevenueMonster-prefix.pch"; sourceTree = "<group>"; };
+		2E9384F51D27625CC2068CDCA49E64D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		2F1DEA7C4454828DFDA527E83D6867E0 /* Pods-RevenueMonster_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RevenueMonster_Example-Info.plist"; sourceTree = "<group>"; };
+		3913676F95C8CCCE1DF69F616D5B4150 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		4A45696E8B12121AD008E5FAF490FC05 /* RevenueMonster.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RevenueMonster.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4A531811F2CEAECEE302CB416DE6F1D6 /* Pods-RevenueMonster_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RevenueMonster_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		4F060EDBAFD50068DFDF0F80DCA90B49 /* RevenueMonster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RevenueMonster-umbrella.h"; sourceTree = "<group>"; };
+		4F18A7C508E36E3C03BF2B9ADDA763EB /* Pods-RevenueMonster_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RevenueMonster_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		54E2919CD281AFC2A6DA4402D7BC9D13 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		5877FFB0ABB1821B65631504D8D91098 /* RevenueMonster */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RevenueMonster; path = RevenueMonster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59559523A5241E8EC1E40DF692E77623 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5965E8FB514639F0C969908A5A6B09C5 /* Scheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
+		5CC0E175E7A2CDAED4F5D24585F1789F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		666D0A48833CA7E0D3C98B0D63B0AC28 /* Status.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		67236365D5CDE37F79BE255613B7536E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6A463A920805D62EF2E9305563C0FF33 /* APayAuthInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APayAuthInfo.h; sourceTree = "<group>"; };
+		6E310458608B02BBBE8A027E6387DDDF /* AlipaySDK */ = {isa = PBXFileReference; includeInIndex = 1; path = AlipaySDK; sourceTree = "<group>"; };
+		71FDD4089AA219226E43FB798EAA39FC /* HttpClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		771B5E7BADF9E250B92E384652A4CD7C /* PaymentResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentResult.swift; sourceTree = "<group>"; };
+		7735DC9EB15837D2DF21D865C672C3E0 /* Pods-RevenueMonster_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RevenueMonster_Tests-umbrella.h"; sourceTree = "<group>"; };
+		78EEB92F1275DFBAD8A0B83F315E95BE /* ErrorException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ErrorException.swift; sourceTree = "<group>"; };
+		7A282C703BD140D4520E062E87796DB5 /* Alipay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Alipay.h; sourceTree = "<group>"; };
+		7D193790FC99B06E50ADA6528F6D6ED4 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		7F39AC91F83C749E7652B1151143C1F3 /* Pods-RevenueMonster_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RevenueMonster_Tests-Info.plist"; sourceTree = "<group>"; };
+		8AB81352B837756461D193510EC01345 /* Pods-RevenueMonster_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RevenueMonster_Example-dummy.m"; sourceTree = "<group>"; };
+		8C34F44095C0359D37B943B28710D705 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = module.modulemap; sourceTree = "<group>"; };
+		8FAF3FBA3EB76DD44FB235827CA5E6B1 /* RevenueMonster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RevenueMonster.modulemap; sourceTree = "<group>"; };
+		96581714B51F7B4D0217EC0EAA3FE80D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		968871EAB8B7CAAC7015798056C686D5 /* Pods-RevenueMonster_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RevenueMonster_Example-frameworks.sh"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E02EB6214A94E92B32DF9A2E39A26B1 /* Method.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		A072485E95D6C47508FDE67EE6A1DF9F /* Domain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		A6C5C2D670B1DEAD6C69272799922F42 /* Pods-RevenueMonster_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RevenueMonster_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		AA0AAEF8CE1A94317CB9C542F39EA390 /* Pods-RevenueMonster_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RevenueMonster_Example"; path = Pods_RevenueMonster_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9F7205048B92CECFE48614FB31B603 /* Checkout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
+		B2C9F28EA6327406EC11BFF0EF3A7731 /* Pods-RevenueMonster_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RevenueMonster_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B5CF266ACE5F3CD174ECA98D8D5CDD26 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		B62785F916979647BE321FA1C7CEF783 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		B654EE78906A3C2A9B1F0A7134D7B43C /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = module.modulemap; sourceTree = "<group>"; };
+		B8DF12F3736E77A67347D0BC5043C10C /* Pods-RevenueMonster_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RevenueMonster_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C4AEE0E22B6AE7A83584EA3411FEA2FA /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		C4F5E2911DC630F7F7A03772791477F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		C56133A4292CC4900351B5A22BB1C1A7 /* RevenueMonster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RevenueMonster.debug.xcconfig; sourceTree = "<group>"; };
+		C6254DF74B742FE9A86BC8707546CC2D /* Pods-RevenueMonster_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RevenueMonster_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CC090D4CF548A286FD5DB8E46F4D87B4 /* Converter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		CDCBF73D802982147E7C34A794B1F2C5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		D423AA88ECCB796C94017F470657BB9E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D9AA578C86415EF0E82233906B5716AA /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		DD2559FDF82BA16BA2707D2565E2EB3C /* AlipaySDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AlipaySDK.h; sourceTree = "<group>"; };
+		DF9D9EC7348C62BA55985034DCAE4E0F /* Pods-RevenueMonster_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RevenueMonster_Example.modulemap"; sourceTree = "<group>"; };
+		E56A94E9005EF9A5930B4AF6C90A8BA9 /* Transaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		E737CD5D949956B36C78B2A7FE24294D /* Pods-RevenueMonster_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RevenueMonster_Tests"; path = Pods_RevenueMonster_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2B8A250A5F14A8CA0D70422631BE1D /* RevenueMonster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RevenueMonster.release.xcconfig; sourceTree = "<group>"; };
+		F038A60528F81937F728CB65537C99EC /* PaymentError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentError.swift; sourceTree = "<group>"; };
+		F08EF6F539D3120EAFC03B84346300ED /* Pods-RevenueMonster_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RevenueMonster_Tests.modulemap"; sourceTree = "<group>"; };
+		F5C97104B4DADBC7F35A71F2AE3B6A98 /* QueryOrder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QueryOrder.swift; sourceTree = "<group>"; };
+		FD17BFAABBC6174D0297CEEC6648C23B /* Order.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		395F3E9B7F955A6359E97200DBA36B92 /* Frameworks */ = {
+		099BD8C18D915E91057491F045415AB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FDCEF3A086F3E9B1932AA2059611F35 /* Foundation.framework in Frameworks */,
+				CCDFAAA7BC41BC9B4F0CAB4560BB3305 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65E87D87907C183852CDBF431218960C /* Frameworks */ = {
+		7B7D17AF1B9A5885395EB11DB00A6EEE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9620315E90F7F3BDFDC8C1AD847A5C5B /* Foundation.framework in Frameworks */,
+				B523B9FEB0920530C10ED2DF9A604497 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E510FC89DEB964220F888FB90E95F0C /* Frameworks */ = {
+		8A024E1A693FBB65FAFBD2E16D772461 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9090C07822E59CA50041E189 /* CoreMotion.framework in Frameworks */,
-				9090C07622E59C700041E189 /* UIKit.framework in Frameworks */,
-				9090C07422E59C5F0041E189 /* CoreGraphics.framework in Frameworks */,
-				9090C07222E59C550041E189 /* CoreText.framework in Frameworks */,
-				9090C07022E59C4B0041E189 /* QuartzCore.framework in Frameworks */,
-				906B9A48228284AA003E873E /* libc++.tbd in Frameworks */,
-				906B9A46228284A1003E873E /* libsqlite3.tbd in Frameworks */,
-				906B9A4422828498003E873E /* libz.tbd in Frameworks */,
-				906B9A422282848D003E873E /* CFNetwork.framework in Frameworks */,
-				906B9A4022828487003E873E /* CoreTelephony.framework in Frameworks */,
-				906B9A3E22828480003E873E /* SystemConfiguration.framework in Frameworks */,
-				906B9A3C2282846C003E873E /* Security.framework in Frameworks */,
-				03BF3688DB36C60F6607CB1F1B3BF423 /* Foundation.framework in Frameworks */,
-				907AFC3122E9781A00A7910D /* AlipaySDK.framework in Frameworks */,
+				757AE195F4BEC761D77A1A6FBF486F9D /* AlipaySDK.framework in Frameworks */,
+				48D0303462E5D623CDC6BD8BF2EBCCD3 /* CFNetwork.framework in Frameworks */,
+				E2A8B3B30BBB45B14263E6CBB940FC23 /* CoreGraphics.framework in Frameworks */,
+				D9437AB7CF542E7E741BC7C1102059CF /* CoreMotion.framework in Frameworks */,
+				C7BB08F8E03810CC8FD75A66C6F0261D /* CoreTelephony.framework in Frameworks */,
+				A16CA9D6E89F7E7260C700BFE407DBFE /* CoreText.framework in Frameworks */,
+				55F55FD2A4C7E69D10F94F8C503D09F5 /* Foundation.framework in Frameworks */,
+				14E8253034C2676B7867B31B51C044B0 /* QuartzCore.framework in Frameworks */,
+				91C1CCEFAB6CE66D6DB659F414B28647 /* Security.framework in Frameworks */,
+				C3C8209AE78F0443CE40025D344F141F /* SystemConfiguration.framework in Frameworks */,
+				0BF038AF8C205F4F1678C24067F3B42A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CBE28DEAE072F41FF45FDE811996F73 /* RevenueMonster */ = {
+		12D700510F92512430275F03EBC96491 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				903088522285D39B000245A9 /* Payment */,
-				9030883A2283F998000245A9 /* Library */,
-				1526AA7B06A1005E8CB53BB4191AED3B /* Pod */,
-				8035B5ABABA32363F5DC4F4A316888FA /* Support Files */,
+				67236365D5CDE37F79BE255613B7536E /* LICENSE */,
+				59559523A5241E8EC1E40DF692E77623 /* README.md */,
+				4A45696E8B12121AD008E5FAF490FC05 /* RevenueMonster.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		22966AEC59CC675C0D791FA161DFA428 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				DD2559FDF82BA16BA2707D2565E2EB3C /* AlipaySDK.h */,
+				6A463A920805D62EF2E9305563C0FF33 /* APayAuthInfo.h */,
+			);
+			name = Headers;
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		2DD470488120F159E775D4AA834F4990 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60CBF53465B3F9176A2758E11601A9F3 /* RevenueMonster */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3C32CAF11BD5583BA31917476D7A9C73 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2584A01392284085CFCCAF98CDB9EF8 /* Pods-RevenueMonster_Example */,
+				B29112AE438CFEEB9E2E0BAA68B49764 /* Pods-RevenueMonster_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3C3A61593F0D40083B97AA977C366202 /* AlipaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				7A282C703BD140D4520E062E87796DB5 /* Alipay.h */,
+				8C34F44095C0359D37B943B28710D705 /* module.modulemap */,
+				44867EBA078664B5EFD6E7B21BE3CB96 /* AlipaySDK.framework */,
+			);
+			name = AlipaySDK;
+			path = AlipaySDK;
+			sourceTree = "<group>";
+		};
+		44867EBA078664B5EFD6E7B21BE3CB96 /* AlipaySDK.framework */ = {
+			isa = PBXGroup;
+			children = (
+				6E310458608B02BBBE8A027E6387DDDF /* AlipaySDK */,
+				22966AEC59CC675C0D791FA161DFA428 /* Headers */,
+			);
+			name = AlipaySDK.framework;
+			path = AlipaySDK.framework;
+			sourceTree = "<group>";
+		};
+		479DBFFAA8BC23024C8CBDF00E3D2CFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2253846B9EA88CD3910D813E3F7C1FF6 /* AlipaySDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48A7B7CE1BC11DFAA128559A9ADA8564 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A77CFE86F96E276E567BF414494551DE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60CBF53465B3F9176A2758E11601A9F3 /* RevenueMonster */ = {
+			isa = PBXGroup;
+			children = (
+				FC02204C09670162D5911C33385FC892 /* Classes */,
+				479DBFFAA8BC23024C8CBDF00E3D2CFF /* Frameworks */,
+				7D27A47D1BFD4BA853E38BDE94AA61E5 /* Library */,
+				12D700510F92512430275F03EBC96491 /* Pod */,
+				E4A97493C3C692097A1DC0DD1313AC07 /* Support Files */,
 			);
 			name = RevenueMonster;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		1526AA7B06A1005E8CB53BB4191AED3B /* Pod */ = {
+		7D27A47D1BFD4BA853E38BDE94AA61E5 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				63D2972781E4F040D85B80ACFB8063AB /* LICENSE */,
-				97F8CB216368283952BA759082832D30 /* README.md */,
-				80D50704A84D99424538AEF28FC96F9D /* RevenueMonster.podspec */,
+				3C3A61593F0D40083B97AA977C366202 /* AlipaySDK */,
+				E4B675927EFB7074968063BD2F587FFD /* WeChatSDK */,
 			);
-			name = Pod;
+			name = Library;
+			path = RevenueMonster/Library;
 			sourceTree = "<group>";
 		};
-		2E1037B70EDB90471783DB422C9EC57C /* Targets Support Files */ = {
+		A00C7A6246E4B18888793CDB4D16C64C /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				ADB3A49CCE9F5AD41D7C6EE378465367 /* Pods-RevenueMonster_Example */,
-				FCE79181640C2F61159BED6D0A229E0C /* Pods-RevenueMonster_Tests */,
+				1A9B4C73A3BC353F68D0E33B0A0BEC4D /* Env.swift */,
+				9E02EB6214A94E92B32DF9A2E39A26B1 /* Method.swift */,
+				5965E8FB514639F0C969908A5A6B09C5 /* Scheme.swift */,
+				666D0A48833CA7E0D3C98B0D63B0AC28 /* Status.swift */,
 			);
-			name = "Targets Support Files";
+			name = Constant;
+			path = Constant;
 			sourceTree = "<group>";
 		};
-		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+		A77CFE86F96E276E567BF414494551DE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+				225DAD1BC89EA93E05422C1A7CD987A3 /* AlipaySDK.framework */,
+				B62785F916979647BE321FA1C7CEF783 /* CFNetwork.framework */,
+				2E9384F51D27625CC2068CDCA49E64D1 /* CoreGraphics.framework */,
+				54E2919CD281AFC2A6DA4402D7BC9D13 /* CoreMotion.framework */,
+				96581714B51F7B4D0217EC0EAA3FE80D /* CoreTelephony.framework */,
+				0552890B98231565BD89B8683C8D5ABF /* CoreText.framework */,
+				5CC0E175E7A2CDAED4F5D24585F1789F /* Foundation.framework */,
+				C4F5E2911DC630F7F7A03772791477F3 /* QuartzCore.framework */,
+				3913676F95C8CCCE1DF69F616D5B4150 /* Security.framework */,
+				CDCBF73D802982147E7C34A794B1F2C5 /* SystemConfiguration.framework */,
+				D423AA88ECCB796C94017F470657BB9E /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		696BACAE3510D868D87E2C53CB22E4F8 /* Development Pods */ = {
+		ABB7E87FDF1C7213ECFD58AF621A6F12 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0CBE28DEAE072F41FF45FDE811996F73 /* RevenueMonster */,
+				111A5BC11D63421006E4369978B07F94 /* BrowserController.swift */,
 			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		784F03E8075392DEAAD86C5A79AA5F76 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				393EAF4FF9061FFA704992A2A7747F6D /* Pods_RevenueMonster_Example.framework */,
-				F1D643085001BDFA8058FC1C4F76D98B /* Pods_RevenueMonster_Tests.framework */,
-				35DC48CE1BED6565698AF102FBD5020B /* RevenueMonster.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				696BACAE3510D868D87E2C53CB22E4F8 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				784F03E8075392DEAAD86C5A79AA5F76 /* Products */,
-				2E1037B70EDB90471783DB422C9EC57C /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		8035B5ABABA32363F5DC4F4A316888FA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				724078B8319C05198540D4C9AC2A4731 /* Info.plist */,
-				75D7F23AB635252176B9D9EF7DE47FB7 /* RevenueMonster.modulemap */,
-				D8E114B2C8125F9FDC9CEB8A3CB4A99E /* RevenueMonster.xcconfig */,
-				5984273E2BC0B47FF2BCD79C36A7BA92 /* RevenueMonster-dummy.m */,
-				ED3D183064EA1C19D7EE42D7450EB198 /* RevenueMonster-prefix.pch */,
-				8912163E05942F5BE6BE247022BCE87C /* RevenueMonster-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/RevenueMonster";
-			sourceTree = "<group>";
-		};
-		903088522285D39B000245A9 /* Payment */ = {
-			isa = PBXGroup;
-			children = (
-				90E3065B22D2430400008D49 /* View */,
-				9030886722875133000245A9 /* Constant */,
-				9030885C22865B1C000245A9 /* Model */,
-				903088572285D41B000245A9 /* Util */,
-				903088532285D39B000245A9 /* PaymentResult.swift */,
-				903088542285D39B000245A9 /* Checkout.swift */,
-				90308872228807E4000245A9 /* QueryOrder.swift */,
-			);
-			name = Payment;
-			path = RevenueMonster/Classes/Payment;
-			sourceTree = "<group>";
-		};
-		903088572285D41B000245A9 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				903088582285D41B000245A9 /* HttpClient.swift */,
-				903088632286655F000245A9 /* ErrorException.swift */,
-				9030886E228757D3000245A9 /* Domain.swift */,
-				903088702288046F000245A9 /* Date.swift */,
-				9030887622881C19000245A9 /* Converter.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		9030885C22865B1C000245A9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9030885D22865BA9000245A9 /* Transaction.swift */,
-				9030885F22865D8D000245A9 /* Order.swift */,
-				9030887422880A87000245A9 /* PaymentError.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9030886722875133000245A9 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				9030886822875161000245A9 /* Env.swift */,
-				9030886A22875306000245A9 /* Method.swift */,
-				9030886C22875497000245A9 /* Status.swift */,
-				907AFC2F22E8C0CD00A7910D /* Scheme.swift */,
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
-		90E3065B22D2430400008D49 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				90E3066022D33BEC00008D49 /* BrowserController.swift */,
-			);
+			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
-		ADB3A49CCE9F5AD41D7C6EE378465367 /* Pods-RevenueMonster_Example */ = {
+		B2584A01392284085CFCCAF98CDB9EF8 /* Pods-RevenueMonster_Example */ = {
 			isa = PBXGroup;
 			children = (
-				56E9DA9156D124B0EF467A37280AE906 /* Info.plist */,
-				652B81F4EDA09553157E4F5401C6B718 /* Pods-RevenueMonster_Example.modulemap */,
-				AF95A5975A0F090E57352CE5ADD84711 /* Pods-RevenueMonster_Example-acknowledgements.markdown */,
-				3BDF4592578B963ED2C711EA12112F61 /* Pods-RevenueMonster_Example-acknowledgements.plist */,
-				0A70AF693188C692F0BC7EB252BC15F9 /* Pods-RevenueMonster_Example-dummy.m */,
-				EC5538AFE021B242CB05A4C0B5B77FC2 /* Pods-RevenueMonster_Example-frameworks.sh */,
-				5AEDE25A213C8E5874927F72840B5880 /* Pods-RevenueMonster_Example-resources.sh */,
-				6DC82F86E8A43B20E678A8C62812BEB3 /* Pods-RevenueMonster_Example-umbrella.h */,
-				C11E7FA868599F69C6046654301429B6 /* Pods-RevenueMonster_Example.debug.xcconfig */,
-				37CD7D323D19EA5CD07A7DFBD220C06A /* Pods-RevenueMonster_Example.release.xcconfig */,
+				DF9D9EC7348C62BA55985034DCAE4E0F /* Pods-RevenueMonster_Example.modulemap */,
+				C6254DF74B742FE9A86BC8707546CC2D /* Pods-RevenueMonster_Example-acknowledgements.markdown */,
+				4A531811F2CEAECEE302CB416DE6F1D6 /* Pods-RevenueMonster_Example-acknowledgements.plist */,
+				8AB81352B837756461D193510EC01345 /* Pods-RevenueMonster_Example-dummy.m */,
+				968871EAB8B7CAAC7015798056C686D5 /* Pods-RevenueMonster_Example-frameworks.sh */,
+				2F1DEA7C4454828DFDA527E83D6867E0 /* Pods-RevenueMonster_Example-Info.plist */,
+				0F5FAA78C87722A7220028D688422BEB /* Pods-RevenueMonster_Example-umbrella.h */,
+				A6C5C2D670B1DEAD6C69272799922F42 /* Pods-RevenueMonster_Example.debug.xcconfig */,
+				B2C9F28EA6327406EC11BFF0EF3A7731 /* Pods-RevenueMonster_Example.release.xcconfig */,
 			);
 			name = "Pods-RevenueMonster_Example";
 			path = "Target Support Files/Pods-RevenueMonster_Example";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		B29112AE438CFEEB9E2E0BAA68B49764 /* Pods-RevenueMonster_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				9090C07922E5A1250041E189 /* AlipaySDK.framework */,
-				9090C07722E59CA50041E189 /* CoreMotion.framework */,
-				9090C07522E59C700041E189 /* UIKit.framework */,
-				9090C07322E59C5F0041E189 /* CoreGraphics.framework */,
-				9090C07122E59C550041E189 /* CoreText.framework */,
-				9090C06F22E59C4B0041E189 /* QuartzCore.framework */,
-				906B9A47228284AA003E873E /* libc++.tbd */,
-				906B9A45228284A1003E873E /* libsqlite3.tbd */,
-				906B9A4322828497003E873E /* libz.tbd */,
-				906B9A412282848D003E873E /* CFNetwork.framework */,
-				906B9A3F22828486003E873E /* CoreTelephony.framework */,
-				906B9A3D22828480003E873E /* SystemConfiguration.framework */,
-				906B9A3B2282846C003E873E /* Security.framework */,
-				5E0D919E635D23B70123790B8308F8EF /* iOS */,
-				90858870228283F300B2BF3F /* libWeChatSDK.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FCE79181640C2F61159BED6D0A229E0C /* Pods-RevenueMonster_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				225FF1B466DA251681251973928098A5 /* Info.plist */,
-				777527BE1FC6DAFBF3578C1784A6B801 /* Pods-RevenueMonster_Tests.modulemap */,
-				6FCC78C1CAB40DB8F91123C54B01BD61 /* Pods-RevenueMonster_Tests-acknowledgements.markdown */,
-				5FB67197890AAECFA483A5DFF252EBF5 /* Pods-RevenueMonster_Tests-acknowledgements.plist */,
-				3D2150B37832E1A95A0024F1FFF88BE0 /* Pods-RevenueMonster_Tests-dummy.m */,
-				96A145C95BE53D5A1C952EB38B720568 /* Pods-RevenueMonster_Tests-frameworks.sh */,
-				C38723EB846B1F8591C1646201DA03C4 /* Pods-RevenueMonster_Tests-resources.sh */,
-				23882692078E4B739EE3A246EE751CA3 /* Pods-RevenueMonster_Tests-umbrella.h */,
-				2410DB2BAC88E521B16887054AB6E8E6 /* Pods-RevenueMonster_Tests.debug.xcconfig */,
-				88939F2B1BC666E71D0EE37E094E6285 /* Pods-RevenueMonster_Tests.release.xcconfig */,
+				F08EF6F539D3120EAFC03B84346300ED /* Pods-RevenueMonster_Tests.modulemap */,
+				B8DF12F3736E77A67347D0BC5043C10C /* Pods-RevenueMonster_Tests-acknowledgements.markdown */,
+				257D3589A4311F73765BAE8F9119C7CF /* Pods-RevenueMonster_Tests-acknowledgements.plist */,
+				1B6856DE9A5250EB6D69BCFD218CB2BF /* Pods-RevenueMonster_Tests-dummy.m */,
+				7F39AC91F83C749E7652B1151143C1F3 /* Pods-RevenueMonster_Tests-Info.plist */,
+				7735DC9EB15837D2DF21D865C672C3E0 /* Pods-RevenueMonster_Tests-umbrella.h */,
+				0473871FF9160D3CD2E6DC24D10CC0CC /* Pods-RevenueMonster_Tests.debug.xcconfig */,
+				4F18A7C508E36E3C03BF2B9ADDA763EB /* Pods-RevenueMonster_Tests.release.xcconfig */,
 			);
 			name = "Pods-RevenueMonster_Tests";
 			path = "Target Support Files/Pods-RevenueMonster_Tests";
 			sourceTree = "<group>";
 		};
+		B29269DE8B139887D64BB40A866ED14A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0AAEF8CE1A94317CB9C542F39EA390 /* Pods-RevenueMonster_Example */,
+				E737CD5D949956B36C78B2A7FE24294D /* Pods-RevenueMonster_Tests */,
+				5877FFB0ABB1821B65631504D8D91098 /* RevenueMonster */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B71ADE9F8ADC997506E5167C01DB1DC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD17BFAABBC6174D0297CEEC6648C23B /* Order.swift */,
+				F038A60528F81937F728CB65537C99EC /* PaymentError.swift */,
+				E56A94E9005EF9A5930B4AF6C90A8BA9 /* Transaction.swift */,
+			);
+			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA00F1A9F4831F4BCF981A59BBAED85A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CC090D4CF548A286FD5DB8E46F4D87B4 /* Converter.swift */,
+				03879C0146846EFB70FE579FF3FFC5BB /* Date.swift */,
+				A072485E95D6C47508FDE67EE6A1DF9F /* Domain.swift */,
+				78EEB92F1275DFBAD8A0B83F315E95BE /* ErrorException.swift */,
+				71FDD4089AA219226E43FB798EAA39FC /* HttpClient.swift */,
+			);
+			name = Util;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				2DD470488120F159E775D4AA834F4990 /* Development Pods */,
+				48A7B7CE1BC11DFAA128559A9ADA8564 /* Frameworks */,
+				B29269DE8B139887D64BB40A866ED14A /* Products */,
+				3C32CAF11BD5583BA31917476D7A9C73 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E32B03434FBDAC83B45D7BE54A62E099 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				AB9F7205048B92CECFE48614FB31B603 /* Checkout.swift */,
+				771B5E7BADF9E250B92E384652A4CD7C /* PaymentResult.swift */,
+				F5C97104B4DADBC7F35A71F2AE3B6A98 /* QueryOrder.swift */,
+				A00C7A6246E4B18888793CDB4D16C64C /* Constant */,
+				B71ADE9F8ADC997506E5167C01DB1DC6 /* Model */,
+				CA00F1A9F4831F4BCF981A59BBAED85A /* Util */,
+				ABB7E87FDF1C7213ECFD58AF621A6F12 /* View */,
+			);
+			name = Payment;
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		E4A97493C3C692097A1DC0DD1313AC07 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FAF3FBA3EB76DD44FB235827CA5E6B1 /* RevenueMonster.modulemap */,
+				126EFDA3E6B1E4A134D960449F299F76 /* RevenueMonster-dummy.m */,
+				11DC02978AD2C6820592A4E733ED2667 /* RevenueMonster-Info.plist */,
+				2760A99BEA7A72CEADF78836C3F14814 /* RevenueMonster-prefix.pch */,
+				4F060EDBAFD50068DFDF0F80DCA90B49 /* RevenueMonster-umbrella.h */,
+				C56133A4292CC4900351B5A22BB1C1A7 /* RevenueMonster.debug.xcconfig */,
+				EF2B8A250A5F14A8CA0D70422631BE1D /* RevenueMonster.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/RevenueMonster";
+			sourceTree = "<group>";
+		};
+		E4B675927EFB7074968063BD2F587FFD /* WeChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D9AA578C86415EF0E82233906B5716AA /* libWeChatSDK.a */,
+				B654EE78906A3C2A9B1F0A7134D7B43C /* module.modulemap */,
+				C4AEE0E22B6AE7A83584EA3411FEA2FA /* WechatAuthSDK.h */,
+				B5CF266ACE5F3CD174ECA98D8D5CDD26 /* WXApi.h */,
+				7D193790FC99B06E50ADA6528F6D6ED4 /* WXApiObject.h */,
+			);
+			name = WeChatSDK;
+			path = WeChatSDK;
+			sourceTree = "<group>";
+		};
+		FC02204C09670162D5911C33385FC892 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E32B03434FBDAC83B45D7BE54A62E099 /* Payment */,
+			);
+			name = Classes;
+			path = RevenueMonster/Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BA24A9DC06BB0773497B095DE39D8B3B /* Headers */ = {
+		4033771C77E5D105F2F105B05871449E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61C9553B1DB4110E45E7E038348634B8 /* Pods-RevenueMonster_Tests-umbrella.h in Headers */,
+				B87EAB6B18691C13B595ECCAA42D52D5 /* Pods-RevenueMonster_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1CC911EC27E3FFE342C32C376A99381 /* Headers */ = {
+		5D585E8A0C92E346777A2B141B1DE642 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B8CFB60740D9F82BEE5AED2F62428B4 /* RevenueMonster-umbrella.h in Headers */,
+				806562D1F4BAA9837FF56EEE7E20D312 /* Pods-RevenueMonster_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E53C0E4E0B06816ACA07856F20769AA9 /* Headers */ = {
+		CED2F25D7BE817AE5FD242E29F711344 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1AC9226BD59AD366EDCE55CDE852AC5 /* Pods-RevenueMonster_Example-umbrella.h in Headers */,
+				3BD65699CEC719640C2EAC0414478C6C /* Alipay.h in Headers */,
+				206135DAB0C5D87193F64DACEEBA69FD /* AlipaySDK.h in Headers */,
+				8B4920531917B05F10B91CD801797453 /* APayAuthInfo.h in Headers */,
+				1BA1BF49F4D7DC76E5EA181DF42E9173 /* RevenueMonster-umbrella.h in Headers */,
+				A6568044E18BBC4D3ADE1B718477FE10 /* WechatAuthSDK.h in Headers */,
+				7FC6DBF095AE341ED464B9AEC8147295 /* WXApi.h in Headers */,
+				31845A3F3394CC6353E1BE2542091C70 /* WXApiObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		76DA6742DF79402863573B754F904467 /* RevenueMonster */ = {
+		13370214445BF659D560CCE03890225E /* Pods-RevenueMonster_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66AA543EAC10A663DC50153AD7787588 /* Build configuration list for PBXNativeTarget "RevenueMonster" */;
+			buildConfigurationList = B306A03D24ACC50B08963413009EDCF8 /* Build configuration list for PBXNativeTarget "Pods-RevenueMonster_Tests" */;
 			buildPhases = (
-				6D84817F5D0D894A872FC1723E6CFE83 /* Sources */,
-				6E510FC89DEB964220F888FB90E95F0C /* Frameworks */,
-				D1CC911EC27E3FFE342C32C376A99381 /* Headers */,
+				5D585E8A0C92E346777A2B141B1DE642 /* Headers */,
+				50293C8E3F3999A586AC1E4D71E787B7 /* Sources */,
+				7B7D17AF1B9A5885395EB11DB00A6EEE /* Frameworks */,
+				B1C35ECCAE3457369D0F64BB239120F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFA2ABEC54CACCF824E872A564B93F1D /* PBXTargetDependency */,
+			);
+			name = "Pods-RevenueMonster_Tests";
+			productName = Pods_RevenueMonster_Tests;
+			productReference = E737CD5D949956B36C78B2A7FE24294D /* Pods-RevenueMonster_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+		7452CAA744A8FAF3D12E0DE199F9D2C5 /* Pods-RevenueMonster_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A870B52148387912A6A9F7E1FC64710A /* Build configuration list for PBXNativeTarget "Pods-RevenueMonster_Example" */;
+			buildPhases = (
+				4033771C77E5D105F2F105B05871449E /* Headers */,
+				A417A699738B15C336DFE0639ABA7E33 /* Sources */,
+				099BD8C18D915E91057491F045415AB7 /* Frameworks */,
+				F267AAEF6A9C6B1FABDB29DABEA788FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9611E8196E85E53973EA66F59FFB40C0 /* PBXTargetDependency */,
+			);
+			name = "Pods-RevenueMonster_Example";
+			productName = Pods_RevenueMonster_Example;
+			productReference = AA0AAEF8CE1A94317CB9C542F39EA390 /* Pods-RevenueMonster_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		87F42BFC2BED1F640591719B13898A9C /* RevenueMonster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 073612D8F840D1B6398B3C9720A20540 /* Build configuration list for PBXNativeTarget "RevenueMonster" */;
+			buildPhases = (
+				CED2F25D7BE817AE5FD242E29F711344 /* Headers */,
+				3BE9C54AEF5EE957EE8CCA30C8378ACA /* Sources */,
+				8A024E1A693FBB65FAFBD2E16D772461 /* Frameworks */,
+				D754DC70F45074C6634DC5FEDB584C8C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -410,275 +535,126 @@
 			);
 			name = RevenueMonster;
 			productName = RevenueMonster;
-			productReference = 35DC48CE1BED6565698AF102FBD5020B /* RevenueMonster.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C9B710F1BE6D058B2EFA5CBA94F2CE14 /* Pods-RevenueMonster_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 085862BD37B296022FD3DD0FC34C08C6 /* Build configuration list for PBXNativeTarget "Pods-RevenueMonster_Tests" */;
-			buildPhases = (
-				BAF18057F1E1A9BFF889DE9E395C62EE /* Sources */,
-				395F3E9B7F955A6359E97200DBA36B92 /* Frameworks */,
-				BA24A9DC06BB0773497B095DE39D8B3B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D481AC665C9CE1705D62795D2C12B8FC /* PBXTargetDependency */,
-			);
-			name = "Pods-RevenueMonster_Tests";
-			productName = "Pods-RevenueMonster_Tests";
-			productReference = F1D643085001BDFA8058FC1C4F76D98B /* Pods_RevenueMonster_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CDFE721F73EF54B1FAABEBB2BC7817D3 /* Pods-RevenueMonster_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D12439FDCCDDF8CD0DEE393DFCCF156B /* Build configuration list for PBXNativeTarget "Pods-RevenueMonster_Example" */;
-			buildPhases = (
-				8210DAA53DDB1DC3F65ADD888E1AF630 /* Sources */,
-				65E87D87907C183852CDBF431218960C /* Frameworks */,
-				E53C0E4E0B06816ACA07856F20769AA9 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A1A311BB414D831E5A11ED9F2E3D33AE /* PBXTargetDependency */,
-			);
-			name = "Pods-RevenueMonster_Example";
-			productName = "Pods-RevenueMonster_Example";
-			productReference = 393EAF4FF9061FFA704992A2A7747F6D /* Pods_RevenueMonster_Example.framework */;
+			productReference = 5877FFB0ABB1821B65631504D8D91098 /* RevenueMonster */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1140;
-				TargetAttributes = {
-					76DA6742DF79402863573B754F904467 = {
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
-					C9B710F1BE6D058B2EFA5CBA94F2CE14 = {
-						ProvisioningStyle = Automatic;
-					};
-					CDFE721F73EF54B1FAABEBB2BC7817D3 = {
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
-				};
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 784F03E8075392DEAAD86C5A79AA5F76 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B29269DE8B139887D64BB40A866ED14A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDFE721F73EF54B1FAABEBB2BC7817D3 /* Pods-RevenueMonster_Example */,
-				C9B710F1BE6D058B2EFA5CBA94F2CE14 /* Pods-RevenueMonster_Tests */,
-				76DA6742DF79402863573B754F904467 /* RevenueMonster */,
+				7452CAA744A8FAF3D12E0DE199F9D2C5 /* Pods-RevenueMonster_Example */,
+				13370214445BF659D560CCE03890225E /* Pods-RevenueMonster_Tests */,
+				87F42BFC2BED1F640591719B13898A9C /* RevenueMonster */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		B1C35ECCAE3457369D0F64BB239120F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D754DC70F45074C6634DC5FEDB584C8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F267AAEF6A9C6B1FABDB29DABEA788FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		6D84817F5D0D894A872FC1723E6CFE83 /* Sources */ = {
+		3BE9C54AEF5EE957EE8CCA30C8378ACA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90E3066122D33BED00008D49 /* BrowserController.swift in Sources */,
-				9030887522880A87000245A9 /* PaymentError.swift in Sources */,
-				9030886B22875306000245A9 /* Method.swift in Sources */,
-				90308873228807E4000245A9 /* QueryOrder.swift in Sources */,
-				9030887722881C19000245A9 /* Converter.swift in Sources */,
-				903088552285D39B000245A9 /* PaymentResult.swift in Sources */,
-				9030885E22865BA9000245A9 /* Transaction.swift in Sources */,
-				9030886D22875497000245A9 /* Status.swift in Sources */,
-				9030886922875161000245A9 /* Env.swift in Sources */,
-				903088592285D41B000245A9 /* HttpClient.swift in Sources */,
-				903088562285D39B000245A9 /* Checkout.swift in Sources */,
-				907AFC3022E8C0CD00A7910D /* Scheme.swift in Sources */,
-				903088642286655F000245A9 /* ErrorException.swift in Sources */,
-				9030886022865D8D000245A9 /* Order.swift in Sources */,
-				903088712288046F000245A9 /* Date.swift in Sources */,
-				9030886F228757D3000245A9 /* Domain.swift in Sources */,
+				1FF71A84EEC3947AC39DFA68BCAFB0D1 /* AlipaySDK in Sources */,
+				D552D19EDF8FACC5D9B2870283FB56E1 /* BrowserController.swift in Sources */,
+				220A65887EFEC385998128F3446DA57B /* Checkout.swift in Sources */,
+				53D305AAC0261DEA8149F6B5CADE41D8 /* Converter.swift in Sources */,
+				114833D7255F6DBCEC93FC5C1B7BAD56 /* Date.swift in Sources */,
+				75E1C7CF6C6F0BA452FB2A032491B955 /* Domain.swift in Sources */,
+				A3EE824EDF7CE68BC37DD0F9DC22F2D4 /* Env.swift in Sources */,
+				F66D7190716A57513FA7FA9E591EBFE9 /* ErrorException.swift in Sources */,
+				5D936E1AE2617CA28CFDE149F3B4C953 /* HttpClient.swift in Sources */,
+				8007D5903A1990269152EE4024A4F43F /* libWeChatSDK.a in Sources */,
+				FB570916757EF2A20662239DEDCB0C52 /* Method.swift in Sources */,
+				F144C0ABB25726201EF6E5268E9889B6 /* module.modulemap in Sources */,
+				F144C0ABB25726201EF6E5268E9889B6 /* module.modulemap in Sources */,
+				8E96330F4401FE5C7509F0112DEF839F /* Order.swift in Sources */,
+				380630248FBC03F76634E0F93B6A79CE /* PaymentError.swift in Sources */,
+				D60B9D312D9F396A2A53E1DC519D9DBD /* PaymentResult.swift in Sources */,
+				EE0D3060C4614092546552B0CC36CDEE /* QueryOrder.swift in Sources */,
+				81C01DDE4B2703B800AC8B36EDEC751E /* RevenueMonster-dummy.m in Sources */,
+				DCFF7350E7812060C3E0FFDFB62A5FB6 /* Scheme.swift in Sources */,
+				8A9BF32F5506BD5BD036DAB1525C4D73 /* Status.swift in Sources */,
+				6DD868C58A7AD19D01E4E904969DDB4C /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8210DAA53DDB1DC3F65ADD888E1AF630 /* Sources */ = {
+		50293C8E3F3999A586AC1E4D71E787B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE7471AFEBFEE8A3819A908BC8DD7FAE /* Pods-RevenueMonster_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAF18057F1E1A9BFF889DE9E395C62EE /* Sources */ = {
+		A417A699738B15C336DFE0639ABA7E33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD58CD088B64A0F386E48E2D8A1D14D6 /* Pods-RevenueMonster_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A1A311BB414D831E5A11ED9F2E3D33AE /* PBXTargetDependency */ = {
+		9611E8196E85E53973EA66F59FFB40C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RevenueMonster;
-			target = 76DA6742DF79402863573B754F904467 /* RevenueMonster */;
-			targetProxy = D05E7830C8045F6BB91CC41EB3B80AD8 /* PBXContainerItemProxy */;
+			target = 87F42BFC2BED1F640591719B13898A9C /* RevenueMonster */;
+			targetProxy = 7C4622A4571A329FD8E47131C73F510C /* PBXContainerItemProxy */;
 		};
-		D481AC665C9CE1705D62795D2C12B8FC /* PBXTargetDependency */ = {
+		AFA2ABEC54CACCF824E872A564B93F1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-RevenueMonster_Example";
-			target = CDFE721F73EF54B1FAABEBB2BC7817D3 /* Pods-RevenueMonster_Example */;
-			targetProxy = FB30C6775FF82B220C320BDBE1EC2C4A /* PBXContainerItemProxy */;
+			target = 7452CAA744A8FAF3D12E0DE199F9D2C5 /* Pods-RevenueMonster_Example */;
+			targetProxy = 91EFD47694D741E1BD0DDE681CC79122 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		070F5C09672509AFDE785DB00937E849 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8E114B2C8125F9FDC9CEB8A3CB4A99E /* RevenueMonster.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK";
-				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/WeChatSDK\"";
-				MARKETING_VERSION = 1.3;
-				MODULEMAP_FILE = "Target Support Files/RevenueMonster/RevenueMonster.modulemap";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-all_load",
-					"-ObjC",
-					"-l\"WeChatSDK\"",
-				);
-				PRODUCT_MODULE_NAME = RevenueMonster;
-				PRODUCT_NAME = RevenueMonster;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INCLUDE_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/**";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		1FDCBEFE001A610558FF7E64840FDAAF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2410DB2BAC88E521B16887054AB6E8E6 /* Pods-RevenueMonster_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		56685802A185B61D97982A1D6E9C2ABC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C11E7FA868599F69C6046654301429B6 /* Pods-RevenueMonster_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RevenueMonster_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -705,14 +681,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -733,50 +708,44 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		8DDC29DCE2D53AE6BB2B2E46BCF61DE2 /* Release */ = {
+		4B5D9673B9BE9B50C1F4715D393A3F22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37CD7D323D19EA5CD07A7DFBD220C06A /* Pods-RevenueMonster_Example.release.xcconfig */;
+			baseConfigurationReference = 4F18A7C508E36E3C03BF2B9ADDA763EB /* Pods-RevenueMonster_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RevenueMonster_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -784,7 +753,72 @@
 			};
 			name = Release;
 		};
-		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+		9B9C9E90E12736E36B16977AF0C48EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2C9F28EA6327406EC11BFF0EF3A7731 /* Pods-RevenueMonster_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B23960E31CC838704295B19A66802824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0473871FF9160D3CD2E6DC24D10CC0CC /* Pods-RevenueMonster_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -811,14 +845,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -837,97 +870,102 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		E04DE8970117332FD1ABE998042608F6 /* Release */ = {
+		CEF6685B2F9BB23358053475CDAA1E1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8E114B2C8125F9FDC9CEB8A3CB4A99E /* RevenueMonster.xcconfig */;
+			baseConfigurationReference = C56133A4292CC4900351B5A22BB1C1A7 /* RevenueMonster.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/AlipaySDK";
 				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RevenueMonster/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/RevenueMonster/RevenueMonster-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../RevenueMonster/Library/WeChatSDK\"";
-				MARKETING_VERSION = 1.3;
 				MODULEMAP_FILE = "Target Support Files/RevenueMonster/RevenueMonster.modulemap";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-all_load",
-					"-ObjC",
-					"-l\"WeChatSDK\"",
-				);
 				PRODUCT_MODULE_NAME = RevenueMonster;
 				PRODUCT_NAME = RevenueMonster;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INCLUDE_PATHS = "${PODS_TARGET_SRCROOT}/RevenueMonster/Library/**";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		F6D9A7D31BD05F1FC1517CCA90F8C131 /* Release */ = {
+		F1D7305AEE6E5969E9016980E49FD3C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88939F2B1BC666E71D0EE37E094E6285 /* Pods-RevenueMonster_Tests.release.xcconfig */;
+			baseConfigurationReference = A6C5C2D670B1DEAD6C69272799922F42 /* Pods-RevenueMonster_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Tests/Pods-RevenueMonster_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-RevenueMonster_Example/Pods-RevenueMonster_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FE4394B7B30B18CE80ADDB34DF33FC1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF2B8A250A5F14A8CA0D70422631BE1D /* RevenueMonster.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RevenueMonster/RevenueMonster-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RevenueMonster/RevenueMonster-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RevenueMonster/RevenueMonster.modulemap";
+				PRODUCT_MODULE_NAME = RevenueMonster;
+				PRODUCT_NAME = RevenueMonster;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -938,43 +976,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		085862BD37B296022FD3DD0FC34C08C6 /* Build configuration list for PBXNativeTarget "Pods-RevenueMonster_Tests" */ = {
+		073612D8F840D1B6398B3C9720A20540 /* Build configuration list for PBXNativeTarget "RevenueMonster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FDCBEFE001A610558FF7E64840FDAAF /* Debug */,
-				F6D9A7D31BD05F1FC1517CCA90F8C131 /* Release */,
+				CEF6685B2F9BB23358053475CDAA1E1C /* Debug */,
+				FE4394B7B30B18CE80ADDB34DF33FC1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
-				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66AA543EAC10A663DC50153AD7787588 /* Build configuration list for PBXNativeTarget "RevenueMonster" */ = {
+		A870B52148387912A6A9F7E1FC64710A /* Build configuration list for PBXNativeTarget "Pods-RevenueMonster_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				070F5C09672509AFDE785DB00937E849 /* Debug */,
-				E04DE8970117332FD1ABE998042608F6 /* Release */,
+				F1D7305AEE6E5969E9016980E49FD3C4 /* Debug */,
+				9B9C9E90E12736E36B16977AF0C48EB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D12439FDCCDDF8CD0DEE393DFCCF156B /* Build configuration list for PBXNativeTarget "Pods-RevenueMonster_Example" */ = {
+		B306A03D24ACC50B08963413009EDCF8 /* Build configuration list for PBXNativeTarget "Pods-RevenueMonster_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56685802A185B61D97982A1D6E9C2ABC /* Debug */,
-				8DDC29DCE2D53AE6BB2B2E46BCF61DE2 /* Release */,
+				B23960E31CC838704295B19A66802824 /* Debug */,
+				4B5D9673B9BE9B50C1F4715D393A3F22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
