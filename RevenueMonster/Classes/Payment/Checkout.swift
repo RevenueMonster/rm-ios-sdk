@@ -112,39 +112,38 @@ public final class Checkout {
 
             let url: String = Domain(self.env).getPaymentGatewayURL() + "/v1/transaction/mobile"
             let (statusCode, data) = try HttpClient().request(url: url, method: "POST", body: body)
-            if statusCode > 204 {
-                let response = try convertToDictionary(text: String(describing: String(data: data!, encoding: .utf8)!))
-                let error = response!["error"] as? Dictionary<String, AnyObject>
-                let paymentError = PaymentError(code: error?["code"] as! String, message: error?["message"] as! String)
+            let response = try convertToDictionary(text: String(describing: String(data: data!, encoding: .utf8)!))
+            let error = response?["error"] as? Dictionary<String, AnyObject>
+            if statusCode > 204 || error != nil {
+                let paymentError = PaymentError(code: error?["code"] as? String ?? "", message: error?["message"] as? String ?? "")
                 result.onPaymentFailed(error: paymentError)
                 return
             }
 
-            let response = try convertToDictionary(text: String(describing: String(data: data!, encoding: .utf8)!))
-            let item = response!["item"] as? Dictionary<String, AnyObject>
+            let item = response?["item"] as? Dictionary<String, AnyObject>
 
             self.isLeaveApp = true
 
             switch method {
             case .WECHATPAY_MY:
-                let prepayId = item?["url"] as! String
+                let prepayId = item?["url"] as? String ?? ""
                 self.leaveTimestamp = Date().timestamp()
                 try weChatPayMalaysia(prepayId)
                 break
             case .GRABPAY_MY, .TNG_MY, .RAZERPAY_MY, .MCASH_MY, .PRESTO_MY, .GOBIZ_MY, .FPX_MY,
                 .SHOPEEPAY_MY,.ZAPP_MY, .PAYDEE_MY, .ALIPAYPLUS_MY, .SENHENGPAY_MY:
-                let prepayId = item?["url"] as! String
+                let prepayId = item?["url"] as? String ?? ""
                 self.leaveTimestamp = Date().timestamp()
                 self.inAppWebView = true
                 try openBrowser(prepayId)
                 break
             case .BOOST_MY:
-                let url = item?["url"] as! String
+                let url = item?["url"] as? String ?? ""
                 self.leaveTimestamp = Date().timestamp()
                 try self.openURL(url)
                 break
             case .ALIPAY_CN:
-                let prepayId = item?["url"] as! String
+                let prepayId = item?["url"] as? String ?? ""
                 self.leaveTimestamp = Date().timestamp()
                 try self.alipayChina(prepayId)
                 break
